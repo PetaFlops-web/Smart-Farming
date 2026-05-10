@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Jorda';
+    src: url('font/Jorda-Exfont1527.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MonasDemo';
+    src: url('font/MonasDemoRegular-eZl86.ttf') format('truetype');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+:root {
+    /* Fonts */
+    --font-display: 'Jorda', sans-serif;
+    --font-body: 'Outfit', sans-serif;
+    --font-logo: 'MonasDemo', sans-serif;
+
+    /* Colors */
+    --primary: #8C5A3C;
+    --secondary: #C08552;
+    --primary-hover: #C08552;
+    --dark: #0d1a0e;
+    --white: #ffffff;
+    --text-main: rgba(255, 255, 255, 1);
+    --text-muted: rgba(255, 255, 255, 0.65);
+    --text-dim: rgba(255, 255, 255, 0.45);
+
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.07);
+    --glass-bg-dark: rgba(255, 255, 255, 0.07);
+    --glass-bg-hover: rgba(255, 255, 255, 0.12);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-blur: 14px;
+
+    /* Spacing */
+    --space-xs: 0.5rem;
+    /* 8px */
+    --space-sm: 1rem;
+    /* 16px */
+    --space-md: 1.5rem;
+    /* 24px */
+    --space-lg: 2.5rem;
+    /* 40px */
+    --space-xl: 4rem;
+    /* 64px */
+    --space-2xl: 6rem;
+    /* 96px */
+
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 32px;
+    --radius-full: 9999px;
+
+    /* Shadows */
+    --shadow-primary: 0 8px 28px rgba(105, 64, 64, 0.366);
+    --shadow-glass: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+    /* Transitions */
+    --transition-fast: all 0.2s ease;
+    --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
