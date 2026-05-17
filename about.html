@@ -1,421 +1,435 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About – AGGRO Smart Coffee Farming</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assests/variables.css" />
     <link rel="stylesheet" href="assests/about.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
 <body>
+    <nav class="fixed top-0 left-0 right-0 z-50 nav-fixed" id="navbar">
+      <div class="max-w-[1540px] mx-auto px-6 w-full py-8 flex items-center justify-between">
+        <a href="index.html" class="logo text-white text-4xl tracking-widest" style="letter-spacing: 0.12em">AGGRO</a>
 
-    <nav class="fixed top-0 left-0 right-0 z-50">
-        <div class="max-w-[1540px] mx-auto px-6 w-full py-8 flex items-center justify-between">
-            <!-- Logo -->
-            <a href="#" class="logo text-white text-4xl tracking-widest" style="letter-spacing:0.12em;">AGGRO</a>
-
-            <!-- Nav links -->
-            <div class="hidden md:flex items-center gap-8">
-                <a href="#" class="text-white/80 hover:text-white text-xl font-medium transition-colors">Services</a>
-                <a href="#" class="text-white/80 hover:text-white text-xl font-medium transition-colors">Product</a>
-                <a href="#" class="text-white/80 hover:text-white text-xl font-medium transition-colors">About</a>
-            </div>
-
-            <!-- CTA -->
-            <a href="#" class="btn-outline text-xl">Contact Us</a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="services.html" class="text-white/80 hover:text-white text-xl font-medium transition-colors">Services</a>
+          <a href="product.html" class="text-white/80 hover:text-white text-xl font-medium transition-colors">Shop</a>
+          <a href="about.html" class="text-white text-xl font-medium transition-colors pb-0.5">About</a>
         </div>
+
+        <a href="contact.html" class="btn-outline text-xl">Contact Us</a>
+      </div>
     </nav>
 
-
-    <!-- ═══════════════════════════════════════════ HERO ABOUT -->
     <section class="about-hero w-full min-h-screen flex flex-col justify-end pb-24 pt-36 rounded-b-[30px] overflow-hidden relative">
+      <div class="grain-overlay absolute inset-0 pointer-events-none z-10"></div>
 
-        <!-- Decorative grain overlay -->
-        <div class="grain-overlay absolute inset-0 pointer-events-none z-10"></div>
-
-        <!-- Floating year badge -->
-<div id="badge-anchor" class="absolute top-0 right-8 md:right-20 z-20 flex flex-col items-center">
-    
-    <div id="badge-pendulum" class="pendulum-wrapper">
-        <div class="badge-string"></div>
-        
-        <div class="est-badge">
+      <div id="badge-anchor" class="absolute top-0 right-8 md:right-20 z-20 flex flex-col items-center">
+        <div id="badge-pendulum" class="pendulum-wrapper">
+          <div class="badge-string"></div>
+          <div class="est-badge">
             <span class="est-text">EST.</span>
             <span class="est-year">2019</span>
+          </div>
         </div>
-    </div>
+      </div>
 
-</div>
+      <div class="max-w-[1540px] mx-auto px-6 w-full relative z-20">
+        <div class="flex flex-col gap-10">
+          <div class="anim-1">
+            <p class="about-eyebrow mb-4">Our Story</p>
+            <h1 class="about-hero-title anim-2">
+              Rooted in the<br />
+              <span class="text-[#8C5A3C]">Highlands,</span><br />
+              Perfected by Data.
+            </h1>
+          </div>
 
-        <div class="max-w-[1540px] mx-auto px-6 w-full relative z-20">
-            <div class="flex flex-col gap-10">
-
-                <div class="anim-1">
-                    <p class="about-eyebrow mb-4">Our Story</p>
-                    <h1 class="about-hero-title anim-2">
-                        Rooted in the<br />
-                        <span class="text-[#8C5A3C]">Highlands,</span><br />
-                        Driven by Data.
-                    </h1>
-                </div>
-
-                <div class="anim-3 flex flex-col md:flex-row gap-8 md:gap-24 items-start">
-                    <p class="about-hero-sub max-w-md">
-                        Born from the volcanic slopes of Sumatra, AGGRO was founded by farmers who refused to choose between tradition and technology.
-                    </p>
-                    <div class="flex flex-col gap-2">
-                        <div class="divider-line"></div>
-                        <p class="about-hero-sub max-w-sm">
-                            Today, we serve over 400 coffee agribusiness clients across Indonesia — helping them grow smarter, yield better, and cup higher.
-                        </p>
-                    </div>
-                </div>
-
+          <div class="anim-3 flex flex-col md:flex-row gap-8 md:gap-24 items-start">
+            <p class="about-hero-sub max-w-md">
+              Lahir dari lereng vulkanik Sumatera, AGGRO didirikan oleh para penikmat kopi yang menolak untuk memilih antara tradisi bertani dan teknologi presisi.
+            </p>
+            <div class="flex flex-col gap-2">
+              <div class="divider-line"></div>
+              <p class="about-hero-sub max-w-sm">
+                Kini, kami menyajikan kopi <i>specialty</i> untuk lebih dari 10.000 pelanggan dan 400 mitra B2B di seluruh Indonesia — <i>smarter sourcing, better roasting, higher cup scores.</i>
+              </p>
             </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Bottom scroll indicator -->
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 scroll-indicator">
-            <div class="scroll-dot"></div>
-        </div>
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 scroll-indicator">
+        <div class="scroll-dot"></div>
+      </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════ SECTION: BIG MANIFESTO -->
     <section class="manifesto-section py-20 px-6 overflow-hidden">
-        <div class="max-w-[1540px] mx-auto">
-
-            <div class="manifesto-grid">
-                <!-- Left: big quote -->
-                <div class="manifesto-left">
-                    <span class="quote-mark">"</span>
-                    <blockquote class="manifesto-quote">
-                        We believe every coffee tree deserves to reach its full potential — and so does every farmer.
-                    </blockquote>
-                    <div class="quote-attr">
-                        <span class="attr-name">Rafi Adinugroho</span>
-                        <span class="attr-role">Founder & Head Agronomist, AGGRO</span>
-                    </div>
-                </div>
-
-                <!-- Right: floating image + label -->
-                <div class="manifesto-right">
-                    <div class="manifesto-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=900&q=80" alt="Coffee farm aerial" class="manifesto-img" />
-                        <div class="manifesto-img-label">
-                            <span>Gayo Highlands, Aceh</span>
-                            <span>1,200 MASL</span>
-                        </div>
-                    </div>
-                    <!-- Decorative number -->
-                    <p class="manifesto-deco-num">05</p>
-                </div>
+      <div class="max-w-[1540px] mx-auto">
+        <div class="manifesto-grid">
+          <div class="manifesto-left">
+            <span class="quote-mark">"</span>
+            <blockquote class="manifesto-quote">
+              We believe every coffee bean deserves to reach its full flavor potential — and so does every cup you brew.
+            </blockquote>
+            <div class="quote-attr">
+              <span class="attr-name">Rafi Adinugroho</span>
+              <span class="attr-role">Founder & Head Roaster, AGGRO</span>
             </div>
+          </div>
 
+          <div class="manifesto-right">
+            <div class="manifesto-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=900&q=80"
+                alt="Coffee farm aerial"
+                class="manifesto-img"
+              />
+              <div class="manifesto-img-label">
+                <span>Gayo Highlands, Aceh</span>
+                <span>1,400 MASL</span>
+              </div>
+            </div>
+            <p class="manifesto-deco-num">05</p>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════ SECTION: ORIGIN STORY (diagonal layout) -->
     <section class="origin-section py-20 px-6">
-        <div class="max-w-[1540px] mx-auto">
-
-            <div class="origin-header mb-16">
-                <span class="section-tag">Origin Story</span>
-                <h2 class="section-heading-dark">From the<br>Ground Up.</h2>
-            </div>
-
-            <!-- Timeline-style story blocks -->
-            <div class="origin-timeline">
-
-                <div class="timeline-item left">
-                    <div class="timeline-year">2019</div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">The First Seed</h3>
-                        <p class="timeline-body">
-                            AGGRO started as a field experiment on a 5-hectare Arabica farm in Toraja. Founder Rafi Adinugroho deployed his first DIY soil sensor array — cobbled together from Arduino boards and repurposed irrigation pipes — to track the exact moisture thresholds that produced his best cherries.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="timeline-item right">
-                    <div class="timeline-year">2021</div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">The Platform Grows</h3>
-                        <p class="timeline-body">
-                            After sharing results at the Indonesian Specialty Coffee Association summit, 40 farmers requested access. The homegrown system became a real platform — AGGRO v1.0. A seed funding round from Nusantara Ventures followed six months later.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="timeline-item left">
-                    <div class="timeline-year">2023</div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Scale & Partnership</h3>
-                        <p class="timeline-body">
-                            AGGRO partnered with three national coffee cooperatives and integrated drone-assisted NDVI mapping into the advisory workflow. Cup score improvements averaging 4.2 points were recorded across partner farms in their first full season.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="timeline-item right active">
-                    <div class="timeline-year">Now</div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">400+ Farms, One Mission</h3>
-                        <p class="timeline-body">
-                            Today AGGRO serves over 400 clients across Sumatra, Java, Flores, and Sulawesi — with a team of 18 agronomists, 4 data scientists, and one very well-calibrated AI.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
+      <div class="max-w-[1540px] mx-auto">
+        <div class="origin-header mb-16">
+          <span class="section-tag">Origin Story</span>
+          <h2 class="section-heading-dark">From the<br />Ground Up.</h2>
         </div>
+
+        <div class="origin-timeline">
+          <div class="timeline-item left">
+            <div class="timeline-year">2019</div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">The First Batch</h3>
+              <p class="timeline-body">
+                AGGRO bermula sebagai eksperimen di garasi kecil. Founder kami, Rafi Adinugroho, mencari profil <i>roasting</i> yang paling sempurna untuk biji Arabica Toraja dengan merakit sensor suhu DIY pada mesin <i>roaster</i> tua miliknya. Tujuannya satu: konsistensi rasa yang absolut.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item right">
+            <div class="timeline-year">2021</div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">The Subscription Era</h3>
+              <p class="timeline-body">
+                Setelah memenangkan penghargaan di kompetisi <i>roasting</i> nasional, permintaan mulai membludak. Kami meluncurkan platform <i>coffee subscription</i> AGGRO v1.0, mengirimkan <i>freshly roasted beans</i> ke ratusan penikmat kopi rumahan (<i>home brewers</i>) setiap bulannya.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item left">
+            <div class="timeline-year">2023</div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">Wholesale Expansion</h3>
+              <p class="timeline-body">
+                Kualitas konsisten kami menarik perhatian industri F&B. AGGRO berekspansi menjadi mitra B2B untuk menyuplai kafe, hotel, dan restoran. Kami mulai bekerja langsung secara <i>direct-trade</i> dengan kelompok tani di Sumatera dan Jawa untuk mengamankan suplai biji hijau berkualitas.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item right active">
+            <div class="timeline-year">Now</div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">10k+ Cups, One Mission</h3>
+              <p class="timeline-body">
+                Hari ini, AGGRO mengkurasi dan menyangrai kopi untuk lebih dari 10.000 pelanggan aktif dan ratusan mitra <i>wholesale</i>. Dengan tim <i>Q-Grader</i> bersertifikat dan ekosistem berbasis data, misi kami tetap sama: menyajikan kopi terbaik di setiap cangkir.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════ SECTION: VALUES (dark bg) -->
-<section class="values-section py-20 px-6">
-        <div class="max-w-[1540px] mx-auto">
-
-            <div class="values-header mb-20">
-                <span class="section-tag-light">What We Stand For</span>
-                <div class="values-header-row">
-                    <h2 class="section-heading-light">Our<br>Core Values.</h2>
-                    <p class="values-subtext">
-                        Everything we build, advise, and measure traces back to these four principles. They are not posters on a wall — they are encoded into our platform's logic and our agronomists' field manuals.
-                    </p>
-                </div>
-            </div>
-
-            <div class="values-grid">
-
-                <div class="value-card">
-                    <div class="value-num">01</div>
-                    <i class="value-icon fa-solid fa-plant-wilt fa-xl" style="color: rgb(255, 255, 255);"></i>   
-                    <h3 class="value-title">Soil First</h3>
-                    <p class="value-body">Great coffee starts underground. We never recommend a single spray, watering, or fertilizer application without verified soil data. The earth's voice comes before our advice.</p>
-                </div>
-
-                <div class="value-card accent">
-                    <div class="value-num">02</div>
-                    <i class="value-icon fa-solid fa-database fa-xl" style="color: rgb(255, 255, 255);"></i>
-                    <h3 class="value-title">Real Data, Real Time</h3>
-                    <p class="value-body">Intuition has its place — but we augment it with sensors, satellites, and machine learning. Every insight on our platform is timestamped, traceable, and peer-reviewed by our agronomy team.</p>
-                </div>
-
-                <div class="value-card">
-                    <div class="value-num">03</div>
-                    <i class="value-icon fa-solid fa-mug-saucer fa-xl" style="color: rgb(255, 255, 255);"></i>
-                    <h3 class="value-title">Cup Quality is Sacred</h3>
-                    <p class="value-body">Yield without flavor is a loss. We optimize for cup score alongside volume, because specialty coffee farmers deserve to command specialty prices — and that starts with protecting the cherry.</p>
-                </div>
-
-                <div class="value-card">
-                    <div class="value-num">04</div>
-                    <i class="value-icon fa-solid fa-handshake fa-xl" style="color: rgb(255, 255, 255);"></i>
-                    <h3 class="value-title">Farmer Partnership</h3>
-                    <p class="value-body">We are not a software company that visits farms. We are farming advisors who built software. That distinction shapes every interaction, every training session, and every product decision we make.</p>
-                </div>
-
-            </div>
+    <section class="values-section py-20 px-6">
+      <div class="max-w-[1540px] mx-auto">
+        <div class="values-header mb-20">
+          <span class="section-tag-light">What We Stand For</span>
+          <div class="values-header-row">
+            <h2 class="section-heading-light">Our<br />Core Values.</h2>
+            <p class="values-subtext">
+              Setiap biji kopi yang kami sangrai dan kami kirimkan berakar kuat pada empat prinsip dasar ini. Ini bukan sekadar slogan, melainkan standar operasional harian kami.
+            </p>
+          </div>
         </div>
+
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-num">01</div>
+            <i class="value-icon fa-solid fa-leaf fa-xl" style="color: rgb(255, 255, 255)"></i>
+            <h3 class="value-title">Sourcing First</h3>
+            <p class="value-body">
+              Kopi hebat dimulai dari tanah. Kami menerapkan praktik <i>direct trade</i>, bekerja langsung dengan petani untuk memastikan mereka dibayar dengan harga premium untuk biji dengan kualitas terbaik.
+            </p>
+          </div>
+
+          <div class="value-card accent">
+            <div class="value-num">02</div>
+            <i class="value-icon fa-solid fa-laptop-code fa-xl" style="color: rgb(255, 255, 255)"></i>
+            <h3 class="value-title">Data-Driven Roasting</h3>
+            <p class="value-body">
+              Insting seorang <i>roaster</i> itu penting, tetapi kami menyempurnakannya dengan data presisi. Setiap profil sangrai kami dilacak secara digital untuk memastikan konsistensi rasa yang absolut di setiap <i>batch</i>.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-num">03</div>
+            <i class="value-icon fa-solid fa-mug-saucer fa-xl" style="color: rgb(255, 255, 255)"></i>
+            <h3 class="value-title">Cup Quality is Sacred</h3>
+            <p class="value-body">
+              Kami tidak berkompromi soal rasa. Setiap rilis baru harus melewati sesi <i>cupping</i> ketat oleh panel <i>Q-Grader</i> kami. Jika skornya tidak memenuhi standar <i>specialty</i>, kami tidak akan menjualnya.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-num">04</div>
+            <i class="value-icon fa-solid fa-users fa-xl" style="color: rgb(255, 255, 255)"></i>
+            <h3 class="value-title">Community & Partners</h3>
+            <p class="value-body">
+              Kami bukan sekadar pemasok. Baik Anda seorang <i>home brewer</i> yang berlangganan bulanan, maupun pemilik kafe, kami menganggap Anda sebagai mitra dalam mengeksekusi seduhan yang sempurna.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════ SECTION: TEAM -->
     <section class="team-section py-20 px-6">
-        <div class="max-w-[1540px] mx-auto">
-
-            <div class="team-header mb-20">
-                <div class="team-header-left">
-                    <span class="section-tag">The People</span>
-                    <h2 class="section-heading-dark">Meet the<br>Minds Behind<br>the Harvest.</h2>
-                </div>
-                <p class="team-intro-text">
-                    Our team is a rare blend — field agronomists with calloused hands and data scientists with PhDs who've actually spent a harvest season in a wet mill. That combination is AGGRO's real unfair advantage.
-                </p>
-            </div>
-
-            <div class="team-grid">
-
-                <div class="team-card featured">
-                    <div class="team-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="Rafi" class="team-img" />
-                        <div class="team-img-overlay"></div>
-                    </div>
-                    <div class="team-info">
-                        <p class="team-name">Rafi Adinugroho</p>
-                        <p class="team-role">Founder & Head Agronomist</p>
-                        <p class="team-bio">15 years on-farm. Q-Grader certified. Built AGGRO's first sensor rig from scratch at 2am in a Toraja barn.</p>
-                    </div>
-                </div>
-
-                <div class="team-card">
-                    <div class="team-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80" alt="Sari" class="team-img" />
-                        <div class="team-img-overlay"></div>
-                    </div>
-                    <div class="team-info">
-                        <p class="team-name">Sari Handayani</p>
-                        <p class="team-role">Lead Data Scientist</p>
-                        <p class="team-bio">Developed AGGRO's predictive harvest model. PhD in Agricultural Engineering, IPB University.</p>
-                    </div>
-                </div>
-
-                <div class="team-card">
-                    <div class="team-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80" alt="Bima" class="team-img" />
-                        <div class="team-img-overlay"></div>
-                    </div>
-                    <div class="team-info">
-                        <p class="team-name">Bima Satria</p>
-                        <p class="team-role">Field Operations Director</p>
-                        <p class="team-bio">Manages 40+ farm partnerships across Sumatra. Former head agronomist at a 500ha Robusta plantation.</p>
-                    </div>
-                </div>
-
-                <div class="team-card">
-                    <div class="team-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80" alt="Laras" class="team-img" />
-                        <div class="team-img-overlay"></div>
-                    </div>
-                    <div class="team-info">
-                        <p class="team-name">Laras Cahyaningrum</p>
-                        <p class="team-role">Sustainability Lead</p>
-                        <p class="team-bio">Designed AGGRO's carbon sequestration tracking module. Rainforest Alliance-trained assessor.</p>
-                    </div>
-                </div>
-
-            </div>
+      <div class="max-w-[1540px] mx-auto">
+        <div class="team-header mb-20">
+          <div class="team-header-left">
+            <span class="section-tag">The People</span>
+            <h2 class="section-heading-dark">
+              Meet the<br />Minds Behind<br />the Roaster.
+            </h2>
+          </div>
+          <p class="team-intro-text">
+            Tim kami adalah perpaduan langka — <i>roasters</i> yang obsesif pada detail rasa, <i>green buyers</i> yang memahami iklim kebun, dan ahli data yang memastikan semuanya terkalibrasi. Ini adalah <i>unfair advantage</i> kami.
+          </p>
         </div>
+
+        <div class="team-grid">
+          <div class="team-card featured">
+            <div class="team-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+                alt="Rafi"
+                class="team-img"
+              />
+              <div class="team-img-overlay"></div>
+            </div>
+            <div class="team-info">
+              <p class="team-name">Rafi Adinugroho</p>
+              <p class="team-role">Founder & Head Roaster</p>
+              <p class="team-bio">
+                10+ tahun pengalaman di industri kopi. Q-Grader bersertifikat. Pendiri visi AGGRO untuk memadukan data sains dengan <i>specialty coffee</i>.
+              </p>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80"
+                alt="Sari"
+                class="team-img"
+              />
+              <div class="team-img-overlay"></div>
+            </div>
+            <div class="team-info">
+              <p class="team-name">Sari Handayani</p>
+              <p class="team-role">Lead Quality Control</p>
+              <p class="team-bio">
+                Pakar sensorik di balik setiap kurasi biji kami. Bertanggung jawab atas sesi <i>cupping</i> harian dan penentuan <i>tasting notes</i>.
+              </p>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80"
+                alt="Bima"
+                class="team-img"
+              />
+              <div class="team-img-overlay"></div>
+            </div>
+            <div class="team-info">
+              <p class="team-name">Bima Satria</p>
+              <p class="team-role">Green Bean Buyer</p>
+              <p class="team-bio">
+                Ujung tombak <i>direct-trade</i> kami. Menghabiskan sebagian besar waktunya di dataran tinggi untuk berkolaborasi dengan kelompok tani.
+              </p>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80"
+                alt="Laras"
+                class="team-img"
+              />
+              <div class="team-img-overlay"></div>
+            </div>
+            <div class="team-info">
+              <p class="team-name">Laras Cahyaningrum</p>
+              <p class="team-role">Head of Wholesale / B2B</p>
+              <p class="team-bio">
+                Penghubung utama dengan ratusan kafe mitra kami. Memastikan kalibrasi mesin dan suplai kopi di bisnis Anda berjalan tanpa hambatan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════ SECTION: METRICS DARK BAND -->
     <section class="metrics-band py-24 px-6">
-        <div class="max-w-[1540px] mx-auto">
-            <div class="metrics-row">
+      <div class="max-w-[1540px] mx-auto">
+        <div class="metrics-row">
+          <div class="metric-item">
+            <p class="metric-num">10<span class="metric-unit">k+</span></p>
+            <p class="metric-label">Active Subscribers</p>
+          </div>
 
-                <div class="metric-item">
-                    <p class="metric-num">400<span class="metric-plus">+</span></p>
-                    <p class="metric-label">Active Farm Partners</p>
-                </div>
+          <div class="metric-divider"></div>
 
-                <div class="metric-divider"></div>
+          <div class="metric-item">
+            <p class="metric-num">86<span class="metric-plus">+</span></p>
+            <p class="metric-label">Average Cup Score</p>
+          </div>
 
-                <div class="metric-item">
-                    <p class="metric-num">4.2<span class="metric-unit">pts</span></p>
-                    <p class="metric-label">Average Cup Score Lift</p>
-                </div>
+          <div class="metric-divider"></div>
 
-                <div class="metric-divider"></div>
+          <div class="metric-item">
+            <p class="metric-num">400<span class="metric-plus">+</span></p>
+            <p class="metric-label">B2B Wholesale Partners</p>
+          </div>
 
-                <div class="metric-item">
-                    <p class="metric-num">40<span class="metric-unit">%</span></p>
-                    <p class="metric-label">Water Reduction Avg.</p>
-                </div>
+          <div class="metric-divider"></div>
 
-                <div class="metric-divider"></div>
-
-                <div class="metric-item">
-                    <p class="metric-num">18</p>
-                    <p class="metric-label">Certified Agronomists</p>
-                </div>
-
-                <div class="metric-divider"></div>
-
-                <div class="metric-item">
-                    <p class="metric-num">6</p>
-                    <p class="metric-label">Islands Covered</p>
-                </div>
-
-            </div>
+          <div class="metric-item">
+            <p class="metric-num">100<span class="metric-unit">%</span></p>
+            <p class="metric-label">Freshly Roasted</p>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════ SECTION: CTA CLOSING -->
     <section class="cta-section py-32 px-6">
-        <div class="max-w-[1540px] mx-auto">
+      <div class="max-w-[1540px] mx-auto">
+        <div class="cta-inner">
+          <img
+            src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=1400&q=80"
+            alt="Coffee farm"
+            class="cta-bg-img"
+          />
+          <div class="cta-overlay"></div>
 
-            <div class="cta-inner">
-                <!-- Background image -->
-                <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=1400&q=80" alt="Coffee farm" class="cta-bg-img" />
-                <div class="cta-overlay"></div>
-
-                <div class="cta-content">
-                    <h2 class="cta-heading">Your Farm's Best<br>Season Starts<br>With a Conversation.</h2>
-                    <p class="cta-sub">
-                        Tell us about your farm, your elevation, your current challenges. Our agronomists respond within 24 hours — no sales pitch, just expertise.
-                    </p>
-                    <div class="cta-actions">
-                        <a href="#" class="btn-lime-cta">Talk to an Agronomist</a>
-                        <a href="#" class="btn-ghost-cta">Explore Services →</a>
-                    </div>
-                </div>
+          <div class="cta-content">
+            <h2 class="cta-heading">
+              Your Best Cup<br />Starts With<br />A Conversation.
+            </h2>
+            <p class="cta-sub">
+              Tertarik berlangganan untuk di rumah atau butuh suplai kopi untuk kafe Anda? Beritahu kami kebutuhan rasa dan volume Anda. Tim ahli kami siap membantu.
+            </p>
+            <div class="cta-actions">
+              <a href="#" class="btn-lime-cta">Talk to a Coffee Expert</a>
+              <a href="#" class="btn-ghost-cta">Explore Shop →</a>
             </div>
-
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════ FOOTER (same as home) -->
     <footer class="py-11 px-6 md:px-10">
-        <div class="max-w-[1540px] mx-auto">
-            <div class="grid grid-cols-2 md:grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-x-8 gap-y-10">
+      <div class="max-w-[1540px] mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-x-8 gap-y-10">
 
-                <!-- Brand Column -->
-                <div class="col-span-2 md:col-span-1 flex flex-col gap-3">
-                    <h2 class="logo  text-[2.6rem] tracking-tight text-black leading-none">
-                        AGGRO
-                    </h2>
-                    <p class="font-body text-[0.82rem] text-[#6b6b6b] leading-relaxed max-w-[200px]">
-                        Honor the traditions of farming while embracing modern innovations. Our platform
-                    </p>
-                </div>
-
-                <!-- Product Column -->
-                <div class="flex flex-col gap-3">
-                    <h3 class="font-body font-semibold text-[0.9rem] text-black">Product</h3>
-                    <ul class="flex flex-col gap-2">
-                        <li><a href="#" class="nav-link text-black font-body text-sm">Features</a></li>
-                        <li><a href="#" class="nav-link text-black font-body text-sm">Pricing</a></li>
-                        <li><a href="#" class="nav-link text-black font-body text-sm">Case studies</a></li>
-                    </ul>
-                </div>
-
-                <!-- Company Column -->
-                <div class="flex flex-col gap-3">
-                    <h3 class="font-body font-semibold text-[0.9rem] text-black">Company</h3>
-                    <ul class="flex flex-col gap-2">
-                        <li><a href="#" class="nav-link text-black font-body text-sm">About</a></li>
-                        <li><a href="#" class="nav-link text-black font-body text-sm">Contact us</a></li>
-                        <li><a href="#" class="nav-link text-black font-body text-sm">Careers</a></li>
-                    </ul>
-                </div>
-
-                <!-- Support Column -->
-                <div class="flex flex-col gap-3">
-                    <h3 class="font-body font-semibold text-[0.9rem] text-black">Support</h3>
-                    <ul class="flex flex-col gap-2">
-                        <li><a href="#" class="nav-link text-black font-body text-sm">Getting started</a></li>
-                        <li><a href="#" class="nav-link text-black font-body text-sm">Help center</a></li>
-                        <li><a href="#" class="nav-link text-black font-body text-sm">Server status</a></li>
-                    </ul>
-                </div>
-
-                <!-- Downloads Column -->
-                <div class="flex flex-col gap-3">
-                    <h3 class="font-body font-semibold text-[0.9rem] text-black">Downloads</h3>
-                    <ul class="flex flex-col gap-2">
-                        <li><a href="#" class="nav-link text-black font-body text-sm">iOS</a></li>
-                        <li><a href="#" class="nav-link text-black font-body text-sm">Android</a></li>
-                        <li><a href="#" class="nav-link text-black font-body text-sm">Mac</a></li>
-                    </ul>
-                </div>
-
+          <div class="col-span-2 md:col-span-1 flex flex-col gap-3">
+            <h2 class="logo text-[2.6rem] tracking-tight text-black leading-none">
+              AGGRO
+            </h2>
+            <p class="font-body text-[0.82rem] text-[#6b6b6b] leading-relaxed max-w-[200px]">
+              Menjaga tradisi, merangkul <i>modern innovations</i> untuk industri kopi yang lebih baik.
+            </p>
+            <div class="flex gap-4 mt-2">
+              <a href="#" class="social-icon"><i class="fa-brands fa-instagram text-[#6b6b6b] hover:text-[#C08552]"></i></a>
+              <a href="#" class="social-icon"><i class="fa-brands fa-linkedin text-[#6b6b6b] hover:text-[#C08552]"></i></a>
+              <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter text-[#6b6b6b] hover:text-[#C08552]"></i></a>
             </div>
-        </div>
-    </footer>
+          </div>
 
-</body>
-<script src="assests/js/badge-animation.js"></script>
+          <div class="flex flex-col gap-3">
+            <h3 class="font-body font-semibold text-[0.9rem] text-black">Shop</h3>
+            <ul class="flex flex-col gap-2">
+              <li><a href="#" class="nav-link text-black font-body text-sm">All Coffee</a></li>
+              <li><a href="#" class="nav-link text-black font-body text-sm">Subscriptions</a></li>
+              <li><a href="#" class="nav-link text-black font-body text-sm">Smart Accessories</a></li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <h3 class="font-body font-semibold text-[0.9rem] text-black">Company</h3>
+            <ul class="flex flex-col gap-2">
+              <li><a href="about.html" class="nav-link text-black font-body text-sm">About Us</a></li>
+              <li><a href="#" class="nav-link text-black font-body text-sm">Contact</a></li>
+              <li><a href="#" class="nav-link text-black font-body text-sm">Careers</a></li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <h3 class="font-body font-semibold text-[0.9rem] text-black">Services</h3>
+            <ul class="flex flex-col gap-2">
+              <li><a href="#" class="nav-link text-black font-body text-sm">Wholesale B2B</a></li>
+              <li><a href="#" class="nav-link text-black font-body text-sm">Private Label</a></li>
+              <li><a href="#" class="nav-link text-black font-body text-sm">Barista Training</a></li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <h3 class="font-body font-semibold text-[0.9rem] text-black">Support</h3>
+            <ul class="flex flex-col gap-2">
+              <li><a href="#" class="nav-link text-black font-body text-sm">Shipping Policy</a></li>
+              <li><a href="#" class="nav-link text-black font-body text-sm">Help Center</a></li>
+              <li><a href="#" class="nav-link text-black font-body text-sm">Return Policy</a></li>
+            </ul>
+          </div>
+
+        </div>
+        
+        <div class="border-t border-gray-200 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p class="font-body text-xs text-gray-400">© 2026 AGGRO. All rights reserved.</p>
+          <div class="flex gap-6">
+            <a href="#" class="font-body text-xs text-gray-400 hover:text-gray-600 transition-colors">Privacy Policy</a>
+            <a href="#" class="font-body text-xs text-gray-400 hover:text-gray-600 transition-colors">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="assests/js/badge-animation.js"></script>
+  <script src="assests/js/navbar-scrollbar.js"></script>
+</html>
+  <script src="assests/js/badge-animation.js"></script>
+  <script src="assests/js/navbar-scrollbar.js"></script>
 </html>

@@ -43,10 +43,9 @@ body {
     transition: background 0.4s ease;
 }
 .nav-fixed.scrolled {
-    background: rgba(13,26,14,0.85);
+    background: var(--glass-bg);
     backdrop-filter: blur(16px);
 }
-
 /* ══════════════════════════════════════════
    HERO ABOUT
 ══════════════════════════════════════════ */

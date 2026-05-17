@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services – AGGRO Smart Coffee Farming</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assests/variables.css" />
+    <link rel="stylesheet" href="assests/services.css" />
+    <script src="assests/tailwind-config.js"></script>
+  </head>
+
+  <body>
+    <nav class="fixed top-0 left-0 right-0 z-50 nav-fixed" id="navbar">
+      <div
+        class="max-w-[1540px] mx-auto px-6 w-full py-8 flex items-center justify-between"
+      >
+        <a
+          href="index.html"
+          class="logo text-white text-4xl tracking-widest"
+          style="letter-spacing: 0.12em"
+          >AGGRO</a
+        >
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            href="services.html"
+            class="text-white text-xl font-medium transition-colors border-[#C08552] pb-0.5"
+            >Services</a
+          >
+          <a
+            href="product.html"
+            class="text-white/80 hover:text-white text-xl font-medium transition-colors"
+            >Shop</a
+          >
+          <a
+            href="about.html"
+            class="text-white/80 hover:text-white text-xl font-medium transition-colors"
+            >About</a
+          >
+        </div>
+        <a href="contact.html" class="btn-outline text-xl">Contact Us</a>
+      </div>
+    </nav>
+
+    <section
+      class="services-hero w-full min-h-screen flex flex-col justify-end pb-24 pt-36 rounded-b-[30px] overflow-hidden relative"
+    >
+      <div
+        class="grain-overlay absolute inset-0 pointer-events-none z-10"
+      ></div>
+
+      <div class="absolute top-36 right-8 md:right-20 z-20 stat-pill anim-pill">
+        <div class="stat-pill-inner">
+          <i class="fa-solid fa-mug-hot stat-icon"></i>
+          <div>
+            <p class="stat-pill-num">10k+</p>
+            <p class="stat-pill-label">Active Subscribers</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-[1540px] mx-auto px-6 w-full relative z-20">
+        <div class="flex flex-col gap-10">
+          <div class="anim-1">
+            <p class="services-eyebrow mb-4">What We Offer</p>
+            <h1 class="services-hero-title anim-2">
+              Elevating Your<br />
+              <span class="block mt-4">
+                Coffee <span class="text-[#C08552]">Experience.</span>
+              </span>
+            </h1>
+          </div>
+          <div
+            class="anim-3 flex flex-col md:flex-row gap-8 md:gap-24 items-start"
+          >
+            <p class="services-hero-sub max-w-md">
+              Mulai dari kurasi biji kopi eksklusif untuk seduhan di rumah,
+              hingga suplai partai besar untuk mendukung pertumbuhan bisnis F&B
+              Anda.
+            </p>
+            <div class="flex flex-col gap-2">
+              <div class="divider-line"></div>
+              <p class="services-hero-sub max-w-sm">
+                Tersedia dalam paket personal bulanan maupun solusi komprehensif
+                untuk mitra wholesale.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 scroll-indicator"
+      >
+        <div class="scroll-dot"></div>
+      </div>
+    </section>
+
+    <section class="py-28 px-6 bg-[#f5f0eb]">
+      <div class="max-w-[1540px] mx-auto">
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-20"
+        >
+          <div>
+            <span class="section-tag">Our Services</span>
+            <h2 class="section-heading-dark">Everything<br />For Your Cup.</h2>
+          </div>
+          <p class="text-gray-500 font-body text-base leading-relaxed max-w-sm">
+            Lebih dari sekadar menjual biji kopi. Kami menyediakan ekosistem
+            layanan lengkap untuk penikmat kopi dan pebisnis ritel.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="svc-card reveal">
+            <div class="svc-card__num">01</div>
+            <div class="svc-card__icon-wrap svc-card__icon-wrap--alt">
+              <i class="fa-solid fa-box-open"></i>
+            </div>
+            <h3 class="svc-card__title">Coffee Subscriptions</h3>
+            <p class="svc-card__body">
+              Dapatkan rotasi biji kopi *single origin* terbaik kami yang
+              dikirim langsung ke pintu Anda setiap bulan. Segar dari mesin
+              *roasting* kami.
+            </p>
+            <div class="svc-card__tags">
+              <span class="svc-tag">Freshly Roasted</span>
+              <span class="svc-tag">Free Shipping</span>
+              <span class="svc-tag">Curated Lots</span>
+            </div>
+            <a href="#" class="svc-card__link">
+              View Plans
+              <i
+                class="fa-solid fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"
+              ></i>
+            </a>
+          </div>
+
+          <div class="svc-card reveal">
+            <div class="svc-card__num">02</div>
+            <div class="svc-card__icon-wrap svc-card__icon-wrap--alt">
+              <i class="fa-solid fa-store"></i>
+            </div>
+            <h3 class="svc-card__title">Wholesale Supply</h3>
+            <p class="svc-card__body">
+              Suplai biji kopi konsisten dengan harga kompetitif untuk kafe,
+              restoran, dan hotel. Dilengkapi dengan pelatihan kalibrasi
+              espresso untuk barista Anda.
+            </p>
+            <div class="svc-card__tags">
+              <span class="svc-tag">Bulk Pricing</span>
+              <span class="svc-tag">Consistent Yield</span>
+              <span class="svc-tag">B2B Portal</span>
+            </div>
+            <a href="#" class="svc-card__link">
+              Become a Partner <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+
+          <div class="svc-card svc-card--dark reveal">
+            <div class="svc-card__num svc-card__num--light">03</div>
+            <div class="svc-card__icon-wrap svc-card__icon-wrap--light">
+              <i class="fa-solid fa-tags"></i>
+            </div>
+            <h3 class="svc-card__title svc-card__title--light">
+              Private Label Roasting
+            </h3>
+            <p class="svc-card__body svc-card__body--light">
+              Kembangkan *house blend* unik untuk merk Anda sendiri. Kami
+              menangani *sourcing*, pembuatan profil sangrai, hingga pengemasan
+              khusus.
+            </p>
+            <div class="svc-card__tags">
+              <span class="svc-tag svc-tag--light">Custom Blends</span>
+              <span class="svc-tag svc-tag--light">White Label</span>
+              <span class="svc-tag svc-tag--light">R&D Support</span>
+            </div>
+            <a href="#" class="svc-card__link svc-card__link--light">
+              Consult with Us <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+
+          <div class="svc-card reveal">
+            <div class="svc-card__num">04</div>
+            <div class="svc-card__icon-wrap svc-card__icon-wrap--alt">
+              <i class="fa-solid fa-blender"></i>
+            </div>
+            <h3 class="svc-card__title">Equipment Servicing</h3>
+            <p class="svc-card__body">
+              Layanan perbaikan dan perawatan preventif untuk mesin espresso dan
+              *grinder* komersial Anda agar selalu dalam kondisi prima.
+            </p>
+            <div class="svc-card__tags">
+              <span class="svc-tag">Preventative Care</span>
+              <span class="svc-tag">Spare Parts</span>
+              <span class="svc-tag">Emergency Calls</span>
+            </div>
+            <a href="#" class="svc-card__link">
+              Book a Technician <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+
+          <div class="svc-card reveal">
+            <div class="svc-card__num">05</div>
+            <div class="svc-card__icon-wrap">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h3 class="svc-card__title">Barista Academy</h3>
+            <p class="svc-card__body">
+              Program sertifikasi dan pelatihan seduh manual maupun *espresso
+              based* untuk pemula hingga profesional, dipandu oleh *trainer*
+              bersertifikat SCA.
+            </p>
+            <div class="svc-card__tags">
+              <span class="svc-tag">SCA Certified</span>
+              <span class="svc-tag">Latte Art</span>
+              <span class="svc-tag">Sensory Skills</span>
+            </div>
+            <a href="#" class="svc-card__link">
+              View Schedule <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+
+          <div class="svc-card svc-card--accent reveal">
+            <div class="svc-card__num svc-card__num--light">06</div>
+            <div class="svc-card__icon-wrap svc-card__icon-wrap--light">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <h3 class="svc-card__title svc-card__title--light">
+              Event Catering
+            </h3>
+            <p class="svc-card__body svc-card__body--light">
+              Hadirkan pengalaman kafe premium di acara korporat, pernikahan,
+              atau festival Anda dengan *coffee cart* *mobile* dan barista
+              berpengalaman kami.
+            </p>
+            <div class="svc-card__tags">
+              <span class="svc-tag svc-tag--light">Mobile Cart</span>
+              <span class="svc-tag svc-tag--light">Custom Menu</span>
+              <span class="svc-tag svc-tag--light">Pro Baristas</span>
+            </div>
+            <a href="#" class="svc-card__link svc-card__link--light">
+              Request a Quote <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-svc-section py-0 overflow-hidden">
+      <div class="max-w-[1540px] mx-auto px-6 py-28">
+        <div class="featured-svc-grid">
+          <div class="featured-svc-img-wrap reveal">
+            <img
+              src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?w=900&q=80"
+              alt="Barista pouring latte art"
+              class="featured-svc-img"
+            />
+            <div class="featured-svc-img-badge">
+              <i class="fa-solid fa-handshake text-[#C08552] text-sm mb-1"></i>
+              <span>Dedicated Support</span>
+              <div class="pulse-dot"></div>
+            </div>
+          </div>
+
+          <div class="featured-svc-content reveal">
+            <span class="section-tag">B2B Program</span>
+            <h2 class="section-heading-dark mt-3 mb-6">
+              Wholesale<br />Partnership.
+            </h2>
+            <p class="font-body text-gray-600 text-base leading-relaxed mb-8">
+              Program unggulan kami untuk bisnis F&B. Kami memastikan kafe Anda
+              tidak pernah kehabisan biji kopi berkualitas, dengan dukungan
+              operasional yang membuat bisnis Anda berkembang lebih cepat.
+            </p>
+
+            <ul class="featured-svc-list">
+              <li class="featured-svc-list-item">
+                <span class="featured-svc-check"
+                  ><i class="fa-solid fa-check"></i
+                ></span>
+                <div>
+                  <strong class="font-display text-[#1e1e1e]"
+                    >Tiered Bulk Pricing</strong
+                  >
+                  <p class="text-gray-500 text-sm">
+                    Diskon berjenjang yang transparan menyesuaikan volume
+                    kebutuhan bulanan Anda.
+                  </p>
+                </div>
+              </li>
+              <li class="featured-svc-list-item">
+                <span class="featured-svc-check"
+                  ><i class="fa-solid fa-check"></i
+                ></span>
+                <div>
+                  <strong class="font-display text-[#1e1e1e]"
+                    >Dedicated Account Manager</strong
+                  >
+                  <p class="text-gray-500 text-sm">
+                    Konsultasi menu, manajemen inventaris, dan bantuan pemesanan
+                    prioritas.
+                  </p>
+                </div>
+              </li>
+              <li class="featured-svc-list-item">
+                <span class="featured-svc-check"
+                  ><i class="fa-solid fa-check"></i
+                ></span>
+                <div>
+                  <strong class="font-display text-[#1e1e1e]"
+                    >Free Routine Calibration</strong
+                  >
+                  <p class="text-gray-500 text-sm">
+                    Kunjungan teknisi bulanan untuk kalibrasi mesin dan QC rasa
+                    seduhan di outlet Anda.
+                  </p>
+                </div>
+              </li>
+              <li class="featured-svc-list-item">
+                <span class="featured-svc-check"
+                  ><i class="fa-solid fa-check"></i
+                ></span>
+                <div>
+                  <strong class="font-display text-[#1e1e1e]"
+                    >Priority Fulfillment</strong
+                  >
+                  <p class="text-gray-500 text-sm">
+                    Jaminan pengiriman H+1 setelah jadwal *roasting* untuk
+                    memastikan kesegaran maksimal.
+                  </p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="flex flex-wrap gap-4 mt-10">
+              <a href="#" class="btn-primary-brown"
+                >Apply for Wholesale <i class="fa-solid fa-arrow-right ml-2"></i
+              ></a>
+              <a href="#" class="btn-ghost-brown">Download B2B Deck</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-28 px-6 bg-[#f5f0eb]">
+      <div class="max-w-[1540px] mx-auto">
+        <div class="text-center mb-20">
+          <span class="section-tag">How It Works</span>
+          <h2 class="section-heading-dark mt-2">
+            From Consultation<br />to Your Cup.
+          </h2>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-step reveal">
+            <div class="process-step__line"></div>
+            <div class="process-step__circle">
+              <i class="fa-solid fa-comments"></i>
+            </div>
+            <div class="process-step__content">
+              <span class="process-step__num">01</span>
+              <h3 class="process-step__title">Consultation</h3>
+              <p class="process-step__body">
+                Tim kami akan mendiskusikan kebutuhan profil rasa, target
+                audiens, dan volume harian bisnis Anda untuk merekomendasikan
+                produk terbaik.
+              </p>
+            </div>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="process-step__line"></div>
+            <div class="process-step__circle process-step__circle--alt">
+              <i class="fa-solid fa-mug-hot"></i>
+            </div>
+            <div class="process-step__content">
+              <span class="process-step__num">02</span>
+              <h3 class="process-step__title">Cupping Session</h3>
+              <p class="process-step__body">
+                Kami akan mengirimkan *sample kit* atau mengundang Anda ke
+                *roastery* kami untuk melakukan sesi *cupping* dan mencicipi
+                calon *blend* Anda secara langsung.
+              </p>
+            </div>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="process-step__line"></div>
+            <div class="process-step__circle">
+              <i class="fa-solid fa-fire"></i>
+            </div>
+            <div class="process-step__content">
+              <span class="process-step__num">03</span>
+              <h3 class="process-step__title">Roasting & Fulfillment</h3>
+              <p class="process-step__body">
+                Pesanan Anda disangrai sesuai jadwal yang ketat untuk mengunci
+                fase *degassing* terbaik sebelum akhirnya dikirimkan ke lokasi
+                Anda.
+              </p>
+            </div>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="process-step__circle process-step__circle--alt">
+              <i class="fa-solid fa-arrows-rotate"></i>
+            </div>
+            <div class="process-step__content">
+              <span class="process-step__num">04</span>
+              <h3 class="process-step__title">Ongoing Support</h3>
+              <p class="process-step__body">
+                Nikmati akses pesanan berulang yang mudah via portal B2B kami
+                dan dapatkan dukungan teknis keliling secara berkala.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-28 px-6 pricing-section">
+      <div class="max-w-[1540px] mx-auto">
+        <div class="text-center mb-20">
+          <span class="section-tag-light">Subscriptions</span>
+          <h2 class="section-heading-light mt-2">
+            Never Run Out<br />of Great Coffee.
+          </h2>
+          <p class="text-gray-500 font-body text-base mt-4 max-w-md mx-auto">
+            Pengiriman gratis, harga lebih hemat, dan Anda bisa membatalkan
+            langganan kapan saja tanpa biaya tersembunyi.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <div class="pricing-card reveal">
+            <div class="pricing-card__badge">Explorer</div>
+            <div class="pricing-card__price">
+              <span class="pricing-card__currency">Rp</span>
+              <span class="pricing-card__amount">155k</span>
+              <span class="pricing-card__period">/bulan</span>
+            </div>
+            <p class="pricing-card__desc">
+              Cocok untuk penikmat kopi santai di rumah yang ingin mencoba 1
+              *single origin* berbeda setiap bulannya.
+            </p>
+            <ul class="pricing-card__features">
+              <li>
+                <i class="fa-solid fa-check text-[#C08552] mr-2"></i> 1x 250g
+                Single Origin
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-[#C08552] mr-2"></i> Monthly
+                Recipe Card
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-[#C08552] mr-2"></i> Free
+                Standard Shipping
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-[#C08552] mr-2"></i> Cancel
+                Anytime
+              </li>
+              <li class="text-gray-400">
+                <i class="fa-solid fa-xmark text-gray-300 mr-2"></i> Exclusive
+                Pre-releases
+              </li>
+              <li class="text-gray-400">
+                <i class="fa-solid fa-xmark text-gray-300 mr-2"></i> Merch
+                Discounts
+              </li>
+            </ul>
+            <a href="#" class="pricing-card__cta pricing-card__cta--ghost"
+              >Subscribe Now</a
+            >
+          </div>
+
+          <div class="pricing-card pricing-card--featured reveal">
+            <div class="pricing-card__badge pricing-card__badge--featured">
+              Enthusiast
+            </div>
+            <div class="pricing-card__price">
+              <span class="pricing-card__currency pricing-card__currency--light"
+                >Rp</span
+              >
+              <span class="pricing-card__amount pricing-card__amount--light"
+                >420k</span
+              >
+              <span class="pricing-card__period pricing-card__period--light"
+                >/bulan</span
+              >
+            </div>
+            <p class="pricing-card__desc pricing-card__desc--light">
+              Pilihan terpopuler. Stok aman untuk peminum kopi harian yang
+              mencari eksplorasi rasa lebih jauh.
+            </p>
+            <ul class="pricing-card__features pricing-card__features--light">
+              <li>
+                <i class="fa-solid fa-check text-[#C08552] mr-2"></i> 3x 250g
+                Rotational Beans
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-[#C08552] mr-2"></i> Monthly
+                Recipe Cards
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-[#C08552] mr-2"></i> Free
+                Express Shipping
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-[#C08552] mr-2"></i> Cancel
+                Anytime
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-[#C08552] mr-2"></i> Exclusive
+                Pre-releases
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-[#C08552] mr-2"></i> 10% Merch
+                Discount
+              </li>
+            </ul>
+            <a href="#" class="pricing-card__cta pricing-card__cta--primary"
+              >Subscribe Now</a
+            >
+          </div>
+
+          <div class="pricing-card reveal">
+            <div class="pricing-card__badge">B2B / Office</div>
+            <div class="pricing-card__price">
+              <span class="pricing-card__currency">Rp</span>
+              <span class="pricing-card__amount">Custom</span>
+            </div>
+            <p class="pricing-card__desc">
+              Solusi *pantry* kantor atau suplai wholesale kafe. Pesanan volume
+              besar (mulai dari 5kg).
+            </p>
+            <ul class="pricing-card__features">
+              <li>
+                <i class="fa-solid fa-check text-[#C08552] mr-2"></i> Bulk
+                Espresso / Filter Lots
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-[#C08552] mr-2"></i> Custom
+                Delivery Schedule
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-[#C08552] mr-2"></i> Dedicated
+                Account Manager
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-[#C08552] mr-2"></i> Routine
+                Equipment Checks
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-[#C08552] mr-2"></i> B2B Portal
+                Access
+              </li>
+              <li>
+                <i class="fa-solid fa-check text-[#C08552] mr-2"></i> Barista
+                Staff Training
+              </li>
+            </ul>
+            <a href="#" class="pricing-card__cta pricing-card__cta--ghost"
+              >Contact Sales</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-28 px-6 bg-[#f5f0eb]">
+      <div class="max-w-[1540px] mx-auto">
+        <div class="mb-16">
+          <span class="section-tag">Testimonials</span>
+          <h2 class="section-heading-dark mt-2">
+            Heard From<br />Our Partners.
+          </h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal">
+            <div class="testimonial-card__stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-card__quote">
+              "Konsistensi sangraian dari AGGRO luar biasa. Sejak menggunakan
+              house blend mereka, retensi pelanggan di kafe kami naik tajam. Tim
+              support-nya juga sangat responsif jika ada masalah mesin."
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80"
+                  alt="Bapak Hendra"
+                />
+              </div>
+              <div>
+                <p class="testimonial-card__name">Bapak Hendra S.</p>
+                <p class="testimonial-card__role">Owner, Kopi Teras Selatan</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card testimonial-card--featured reveal">
+            <div class="testimonial-card__stars testimonial-card__stars--light">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-card__quote testimonial-card__quote--light">
+              "Paket langganan bulanan 'Enthusiast' benar-benar mengubah
+              rutinitas pagi saya. Beans yang dikirim selalu fresh dan kurasinya
+              tidak pernah mengecewakan. Gayo Natural-nya juara!"
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80"
+                  alt="Pak Ridwan"
+                />
+              </div>
+              <div>
+                <p class="testimonial-card__name testimonial-card__name--light">
+                  Aditya M.
+                </p>
+                <p class="testimonial-card__role testimonial-card__role--light">
+                  Home Brewer & Subscriber
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal">
+            <div class="testimonial-card__stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <p class="testimonial-card__quote">
+              "Proses pembuatan private label untuk restoran kami berjalan
+              sangat mulus. Mereka mendengarkan dengan baik *tasting notes* yang
+              kami inginkan dan berhasil mengeksekusinya di sesi cupping
+              pertama."
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">
+                <img
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80"
+                  alt="Ibu Sari"
+                />
+              </div>
+              <div>
+                <p class="testimonial-card__name">Ibu Sari W.</p>
+                <p class="testimonial-card__role">
+                  F&B Manager, The Highland Hotel
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section py-28 px-6">
+      <div class="max-w-[1540px] mx-auto">
+        <div class="cta-inner reveal">
+          <div class="cta-bg-art"></div>
+          <div
+            class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-10"
+          >
+            <div>
+              <p
+                class="font-body text-[#C08552] text-xs uppercase tracking-widest mb-3 font-semibold"
+              >
+                Join Our Ecosystem
+              </p>
+              <h2
+                class="font-display font-extrabold text-white text-4xl md:text-6xl leading-tight"
+              >
+                Let's Brew<br />Something Great.
+              </h2>
+              <p class="font-body text-white/60 text-base mt-4 max-w-sm">
+                Siap untuk beralih ke suplai kopi yang lebih baik? Tim kami siap
+                mengirimkan *sample* ke lokasi Anda.
+              </p>
+            </div>
+            <div class="flex flex-col gap-4 flex-shrink-0">
+              <a href="#" class="btn-primary-lime"
+                >Request a Sample <i class="fa-solid fa-arrow-right ml-2"></i
+              ></a>
+              <a
+                href="#"
+                class="text-center text-white/60 font-body text-sm hover:text-white transition-colors"
+              >
+                <i class="fa-solid fa-calendar-days mr-2"></i>Book a Roastery
+                Visit
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-11 px-6 md:px-10">
+      <div class="max-w-[1540px] mx-auto">
+        <div
+          class="grid grid-cols-2 md:grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-x-8 gap-y-10"
+        >
+          <div class="col-span-2 md:col-span-1 flex flex-col gap-3">
+            <h2
+              class="logo text-[2.6rem] tracking-tight text-black leading-none"
+            >
+              AGGRO
+            </h2>
+            <p
+              class="font-body text-[0.82rem] text-[#6b6b6b] leading-relaxed max-w-[200px]"
+            >
+              Honor the traditions of farming while embracing modern
+              innovations.
+            </p>
+            <div class="flex gap-4 mt-2">
+              <a href="#" class="social-icon"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+            </div>
+          </div>
+          <div class="flex flex-col gap-3">
+            <h3 class="font-body font-semibold text-[0.9rem] text-black">
+              Shop
+            </h3>
+            <ul class="flex flex-col gap-2">
+              <li><a href="#" class="nav-link-footer">All Coffee</a></li>
+              <li><a href="#" class="nav-link-footer">Subscriptions</a></li>
+              <li><a href="#" class="nav-link-footer">Smart Accessories</a></li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-3">
+            <h3 class="font-body font-semibold text-[0.9rem] text-black">
+              Company
+            </h3>
+            <ul class="flex flex-col gap-2">
+              <li><a href="about.html" class="nav-link-footer">About</a></li>
+              <li><a href="#" class="nav-link-footer">Contact us</a></li>
+              <li><a href="#" class="nav-link-footer">Careers</a></li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-3">
+            <h3 class="font-body font-semibold text-[0.9rem] text-black">
+              Support
+            </h3>
+            <ul class="flex flex-col gap-2">
+              <li><a href="#" class="nav-link-footer">Shipping Policy</a></li>
+              <li><a href="#" class="nav-link-footer">Help center</a></li>
+              <li><a href="#" class="nav-link-footer">Return Policy</a></li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-3">
+            <h3 class="font-body font-semibold text-[0.9rem] text-black">
+              Services
+            </h3>
+            <ul class="flex flex-col gap-2">
+              <li><a href="#" class="nav-link-footer">Wholesale B2B</a></li>
+              <li><a href="#" class="nav-link-footer">Private Label</a></li>
+              <li><a href="#" class="nav-link-footer">Barista Training</a></li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-200 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4"
+        >
+          <p class="font-body text-xs text-gray-400">
+            © 2026 AGGRO Agritech. All rights reserved.
+          </p>
+          <div class="flex gap-6">
+            <a
+              href="#"
+              class="font-body text-xs text-gray-400 hover:text-gray-600 transition-colors"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="font-body text-xs text-gray-400 hover:text-gray-600 transition-colors"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assests/js/navbar-scrollbar.js"></script>
+  </body>
+</html>
