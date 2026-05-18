@@ -1,410 +1,727 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AGGRO – Expert Advisory For Smarter Farming</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="assests/variables.css" />
     <link rel="stylesheet" href="assests/home.css" />
     <script src="assests/tailwind-config.js"></script>
-</head>
+  </head>
 
-<body class="text-white overflow-x-hidden">
+  <body class="text-white overflow-x-hidden">
+    <nav class="fixed top-0 left-0 right-0 z-50 nav-fixed" id="navbar">
+      <div
+        class="max-w-[1540px] mx-auto px-6 w-full py-8 flex items-center justify-between"
+      >
+        <a
+          href="index.html"
+          class="logo text-white text-4xl tracking-widest"
+          style="letter-spacing: 0.12em"
+          >AGGRO</a
+        >
 
-    <!-- NAVBAR -->
-    <nav class="fixed top-0 left-0 right-0 z-50">
-        <div class="max-w-[1540px] mx-auto px-6 w-full py-8 flex items-center justify-between">
-            <!-- Logo -->
-            <a href="#" class="logo text-white text-4xl tracking-widest" style="letter-spacing:0.12em;">AGGRO</a>
-
-            <!-- Nav links -->
-            <div class="hidden md:flex items-center gap-8">
-                <a href="#" class="text-white/80 hover:text-white text-xl font-medium transition-colors">Services</a>
-                <a href="#" class="text-white/80 hover:text-white text-xl font-medium transition-colors">Product</a>
-                <a href="#" class="text-white/80 hover:text-white text-xl font-medium transition-colors">About</a>
-            </div>
-
-            <!-- CTA -->
-            <a href="#" class="btn-outline text-xl">Contact Us</a>
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            href="services.html"
+            class="text-white/80 hover:text-white text-xl font-medium transition-colors"
+            >Services</a
+          >
+          <a
+            href="product.html"
+            class="text-white/80 hover:text-white text-xl font-medium transition-colors"
+            >Shop</a
+          >
+          <a
+            href="about.html"
+            class="text-white text-xl font-medium transition-colors pb-0.5"
+            >About</a
+          >
         </div>
+
+        <a href="contact.html" class="btn-outline text-xl">Contact Us</a>
+      </div>
     </nav>
 
-    <!-- HERO -->
-    <section class="hero-bg w-full min-h-screen flex flex-col justify-end pb-24 pt-32 rounded-b-[30px]">
+    <section
+      class="hero-bg w-full min-h-screen flex flex-col justify-end pb-24 pt-32 rounded-b-[30px]"
+    >
+      <div class="max-w-[1540px] mx-auto px-6 w-full">
+        <div class="max-w-5xl flex flex-col gap-12">
+          <div class="anim-1 font-display">
+            <h1 class="anim-2 hero-title text-white text-8xl">
+              Expert Advisory For<br />
+              <span class="text-[#8C5A3C]">Smarter Farming</span>
+            </h1>
+          </div>
 
-        <div class="max-w-[1540px] mx-auto px-6 w-full">
-            <div class="max-w-5xl flex flex-col gap-12">
+          <p class="anim-3 text-white/65 text-base leading-relaxed max-w-xl">
+            Membantu agribisnis kopi Anda berkembang dengan
+            <i>smart insights</i>, keahlian profesional, dan strategi
+            operasional yang <i>sustainable</i>.
+          </p>
 
-                <div class="anim-1 font-display">
-                    <h1 class="anim-2 hero-title text-white text-8xl">
-                        Expert Advisory For<br />
-                        <span class="text-[#8C5A3C]">Smarter Farming</span>
-                    </h1>
-                </div>
-
-                <p class="anim-3 text-white/65 text-base leading-relaxed max-w-xl">
-                    Helping farming agribusinesses grow with smart insights, expert advice, and sustainable strategies.
-                </p>
-
-                <div class="anim-4 flex flex-wrap gap-4 mt-6">
-                    <a href="#" class="btn-lime text-xl">Get Started</a>
-                </div>
-
-            </div>
+          <div class="anim-4 flex flex-wrap gap-4 mt-6">
+            <a href="#" class="btn-lime text-xl">Mulai Sekarang</a>
+          </div>
         </div>
-        </div>
+      </div>
     </section>
 
     <section class="max-w-[1540px] mx-auto px-6 mt-24">
-
-        <div class="grid gap-8 md:gap-12 mb-10 md:px-4 items-end">
-
-            <div class="md:col-span-7 flex flex-col items-start text-left">
-
-                <div class="mb-5">
-                    <span
-                        class="badge-secondary font-display font-semibold text-xl px-4 py-1.5 rounded-full tracking-wide">
-                        Our Achievement
-                    </span>
-                </div>
-
-                <h2 class="font-display font-[800] text-black text-4xl md:text-[5.6rem] leading-tight">
-                    The Relentless Efforts<br>and Achievement of our Farmers
-                </h2>
-
-            </div>
-
-            <div class="md:col-span-5 text-left md:pb-2">
-                <p class="text-gray-500 font-body text-base leading-relaxed text-xl">
-                    Honor the traditions of farming while embracing modern innovations.
-                    Our platform offers a balanced approach combining time-tested methods
-                    with cutting-edge technology to help you achieve optimal results.
-                </p>
-            </div>
-
+      <div class="grid gap-8 md:gap-12 mb-10 md:px-4 items-end">
+        <div class="md:col-span-7 flex flex-col items-start text-left">
+          <div class="mb-5">
+            <span
+              class="badge-secondary font-display font-semibold text-xl px-4 py-1.5 rounded-full tracking-wide"
+            >
+              Our Achievement
+            </span>
+          </div>
+          <h2
+            class="font-display font-[800] text-black text-4xl md:text-[5.6rem] leading-tight"
+          >
+            Dedikasi Tanpa Henti<br />dan Pencapaian Mitra Kami
+          </h2>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-24 items-stretch">
 
-            <div class="card-hover card-1  rounded-3xl p-7 flex flex-col justify-between h-full gap-4">
-                <div>
-                    <p class="font-display font-extrabold text-4xl mb-1">95%</p>
-                    <p class="font-display font-semibold text-base">Client Satisfaction</p>
-                </div>
-                <p class="text-sm leading-relaxed font-body">
-                    Honor the traditions of farming while embracing modern innovations.
-                    Our platform offers a balanced approach combining time-tested methods with cutting edge.
-                </p>
-            </div>
-
-            <div class="card-hover card-2 rounded-3xl p-7 flex flex-col justify-between h-full gap-4 shadow-lg">
-                <div>
-                    <p class="font-display font-extrabold text-4xl mb-1">100+</p>
-                    <p class="font-display font-semibold text-base">Farmers In the farm!</p>
-                </div>
-                <p class="text-sm leading-relaxed font-body">
-                    Honor the traditions of farming while embracing modern innovations.
-                    Our platform offers a balanced approach.
-                </p>
-            </div>
-
-            <div class="card-hover card-3 rounded-3xl p-7 flex flex-col justify-between h-full gap-4">
-                <div>
-                    <p class="font-display font-extrabold text-4xl mb-1">400+</p>
-                    <p class="font-display font-semibold text-base">Total Clients</p>
-                </div>
-                <p class="text-sm leading-relaxed font-body">
-                    Honor the traditions of farming while embracing modern innovations.
-                    Our platform offers a balanced approach combining time-tested.
-                </p>
-            </div>
-
-            <div class="card-hover card-4 rounded-3xl p-7 flex flex-col justify-between h-full gap-4">
-                <div>
-                    <p class="font-display font-extrabold text-4xl mb-1">100%</p>
-                    <p class="font-display font-semibold text-base">Fresh Food</p>
-                </div>
-                <p class="text-sm leading-relaxed font-body">
-                    Honor the traditions of farming while embracing modern innovations.
-                    Our platform offers a balanced approach.
-                </p>
-            </div>
-
+        <div class="md:col-span-5 text-left md:pb-2">
+          <p class="text-gray-500 font-body text-base leading-relaxed text-xl">
+            Menghargai tradisi budidaya kopi sembari merangkul
+            <i>modern innovations</i>. Platform kami menawarkan pendekatan
+            seimbang yang memadukan metode <i>time-tested</i> dengan
+            <i>cutting-edge technology</i> untuk kualitas terbaik.
+          </p>
         </div>
+      </div>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-24 items-stretch"
+      >
+        <div
+          class="card-hover card-1 rounded-3xl p-7 flex flex-col justify-between h-full gap-4"
+        >
+          <div>
+            <p class="font-display font-extrabold text-4xl mb-1">95%</p>
+            <p class="font-display font-semibold text-base">
+              Client Satisfaction
+            </p>
+          </div>
+          <p class="text-sm leading-relaxed font-body">
+            Tingkat kepuasan tinggi dari mitra B2B maupun pelanggan *coffee
+            subscription* kami di seluruh Indonesia.
+          </p>
+        </div>
+
+        <div
+          class="card-hover card-2 rounded-3xl p-7 flex flex-col justify-between h-full gap-4 shadow-lg"
+        >
+          <div>
+            <p class="font-display font-extrabold text-4xl mb-1">100+</p>
+            <p class="font-display font-semibold text-base">Active Farmers</p>
+          </div>
+          <p class="text-sm leading-relaxed font-body">
+            Ratusan mitra petani kopi yang telah mengintegrasikan sistem
+            <i>smart farming</i> di lahan mereka.
+          </p>
+        </div>
+
+        <div
+          class="card-hover card-3 rounded-3xl p-7 flex flex-col justify-between h-full gap-4"
+        >
+          <div>
+            <p class="font-display font-extrabold text-4xl mb-1">400+</p>
+            <p class="font-display font-semibold text-base">
+              Wholesale Clients
+            </p>
+          </div>
+          <p class="text-sm leading-relaxed font-body">
+            Mensuplai kebutuhan biji kopi konsisten untuk kafe, hotel, dan
+            restoran secara nasional.
+          </p>
+        </div>
+
+        <div
+          class="card-hover card-4 rounded-3xl p-7 flex flex-col justify-between h-full gap-4"
+        >
+          <div>
+            <p class="font-display font-extrabold text-4xl mb-1">100%</p>
+            <p class="font-display font-semibold text-base">Freshly Roasted</p>
+          </div>
+          <p class="text-sm leading-relaxed font-body">
+            Pesanan Anda disangrai sesuai pesanan (<i>roast-to-order</i>) untuk
+            memastikan fase <i>degassing</i> terbaik.
+          </p>
+        </div>
+      </div>
     </section>
 
     <section class="max-w-[1540px] mx-auto px-6 mb-24">
+      <div class="heading-anim text-right py-10 mb-6">
+        <h2
+          class="font-display font-extrabold text-[2.6rem] md:text-8xl text-[#3a3a3a] leading-tight"
+        >
+          Farming Solutions For Optimal<br />Yield and Sustainability
+        </h2>
+      </div>
 
-        <!-- Heading -->
-        <div class="heading-anim text-right py-10 mb-6">
-            <h2 class="font-display font-extrabold text-[2.6rem] md:text-8xl text-[#3a3a3a] leading-tight">
-                Farming Solutions For Optimal<br>Yield and Sustainability
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div
+          class="farm-card card-1 relative rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=800&q=80"
+            alt="Coffee bean harvesting by hand"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="card-bar absolute bottom-4 left-6 right-0 flex items-center justify-between px-4 py-3"
+          >
+            <span class="text-white text-sm font-body"
+              >Precision Harvesting</span
+            >
+            <button class="see-more-btn">Lihat Detail</button>
+          </div>
+        </div>
+
+        <div
+          class="farm-card card-2 relative rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=800&q=80"
+            alt="Coffee bean processing and sorting"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="card-bar absolute bottom-4 left-6 right-0 flex items-center justify-between px-4 py-3"
+          >
+            <span class="text-white text-sm font-body"
+              >Data-Driven Processing</span
+            >
+            <button class="see-more-btn">Lihat Detail</button>
+          </div>
+        </div>
+
+        <div
+          class="farm-card card-3 relative rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=800&q=80"
+            alt="Roasted coffee beans closeup"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="card-bar absolute bottom-4 left-6 right-0 flex items-center justify-between px-4 py-3"
+          >
+            <span class="text-white text-sm font-body">Profile Roasting</span>
+            <button class="see-more-btn">Lihat Detail</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 px-6">
+      <div class="max-w-[1540px] mx-auto">
+        <div
+          class="grid md:grid-cols-[5fr_7fr] gap-12 items-start justify-between"
+        >
+          <div class="anim-title pt-2 flex flex-col items-start text-left">
+            <span
+              class="font-display font-semibold tracking-widest text-xs uppercase text-amber-800 mb-2"
+            >
+              The Future of Coffee
+            </span>
+            <h2
+              class="font-display font-extrabold text-[2rem] md:text-5xl lg:text-6xl leading-tight text-[#1e1e1e]"
+            >
+              Menghargai Tradisi,<br />
+              Memimpin dengan<br />
+              <i>Innovation.</i>
             </h2>
+          </div>
+
+          <div class="flex flex-col gap-8 pl-0 md:pl-8">
+            <div>
+              <h3 class="font-display font-bold text-xl text-[#1e1e1e] mb-3">
+                Presisi <i>Micro-Climate</i> di Setiap MDPL
+              </h3>
+              <p
+                class="text-base leading-relaxed font-body text-gray-700 text-justify"
+              >
+                Budidaya kopi kini bukan lagi sekadar tebakan cuaca. Ekosistem
+                <i>smart farming</i> kami mengintegrasikan sensor tanah
+                <i>real-time</i> dan pemantauan iklim berbasis AI. Kami membantu
+                Anda melacak kelembapan, suhu sekitar, dan kebutuhan nutrisi
+                secara akurat, memastikan setiap pohon kopi mendapatkan
+                perawatan yang <i>tailored</i> di ketinggian berapapun.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-display font-bold text-xl text-[#1e1e1e] mb-3">
+                Konsistensi Panen & <i>Elevated Cup Scores</i>
+              </h3>
+              <p
+                class="text-base leading-relaxed font-body text-gray-700 text-justify"
+              >
+                Didukung oleh <i>predictive analytics</i>, risiko gagal panen
+                dan hama dapat dimitigasi lebih awal. Teknologi kami dirancang
+                tidak hanya untuk efisiensi operasional, tetapi juga untuk
+                mengunci <i>tasting notes</i> yang konsisten dan terus
+                meningkatkan <i>cup scores</i> biji kopi Anda setiap musimnya.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-28 px-6">
+      <div class="max-w-[1540px] mx-auto">
+        <div class="text-right mb-20">
+          <span
+            class="font-display text-xs uppercase tracking-widest text-amber-700 mb-3 block"
+            >Cara Kerja Ekosistem Kami</span
+          >
+          <h2
+            class="font-display font-extrabold text-4xl md:text-7xl text-[#1e1e1e] leading-tight"
+          >
+            Dari Kebun Menjadi Data,<br />Dalam 4 Langkah.
+          </h2>
         </div>
 
-        <!-- 3 Image Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-0 relative">
+          <div
+            class="hidden md:block absolute top-8 left-[12.5%] right-[12.5%] h-px bg-gray-300 z-0"
+          ></div>
 
-            <!-- Card 1: Automation Solution -->
-            <div class="farm-card card-1 relative rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer">
-                <!-- Image -->
-                <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=800&q=80"
-                    alt="Coffee bean harvesting by hand" class="w-full h-full object-cover" />
-                <!-- Frosted bottom bar -->
-                <div class="card-bar absolute  bottom-4 left-6 right-0 flex items-center justify-between px-4 py-3">
-                    <span class="text-white text-sm font-body">Coffee Bean Harvesting</span>
-                    <button class="see-more-btn">See More</button>
-                </div>
+          <div
+            class="flex flex-col items-center text-center px-6 relative z-10"
+          >
+            <div
+              class="w-16 h-16 rounded-full bg-[#C08552] text-white font-display font-extrabold text-2xl flex items-center justify-center mb-6"
+            >
+              01
             </div>
+            <h3 class="font-display font-bold text-lg text-[#1e1e1e] mb-2">
+              Deploy Sensors
+            </h3>
+            <p class="font-body text-gray-500 text-sm leading-relaxed">
+              Pasang sensor iklim dan tanah kami di berbagai zona kebun Anda
+              untuk <i>data capture</i> 24/7.
+            </p>
+          </div>
 
-            <!-- Card 2: Smart Irrigation System -->
-            <div class="farm-card card-2 relative rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer">
-                <!-- Image -->
-                <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=800&q=80"
-                    alt="Coffee bean processing and sorting" class="w-full h-full object-cover" />
-                <!-- Frosted bottom bar -->
-                <div class="card-bar absolute bottom-4 left-6 right-0 flex items-center justify-between px-4 py-3">
-                    <span class="text-white text-sm font-body">Coffee Bean Processing</span>
-                    <button class="see-more-btn">See More</button>
-                </div>
+          <div
+            class="flex flex-col items-center text-center px-6 relative z-10"
+          >
+            <div
+              class="w-16 h-16 rounded-full bg-[#C08552] text-white font-display font-extrabold text-2xl flex items-center justify-center mb-6"
+            >
+              02
             </div>
+            <h3 class="font-display font-bold text-lg text-[#1e1e1e] mb-2">
+              Collect & Sync
+            </h3>
+            <p class="font-body text-gray-500 text-sm leading-relaxed">
+              Data dialirkan secara <i>real-time</i> ke
+              <i>cloud platform</i> kami dan diproses secara instan.
+            </p>
+          </div>
 
-            <div class="farm-card card-3 relative rounded-2xl overflow-hidden aspect-[4/3] cursor-pointer">
-                <!-- Image -->
-                <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=800&q=80"
-                    alt="Roasted coffee beans closeup" class="w-full h-full object-cover" />
-                <!-- Frosted bottom bar -->
-                <div class="card-bar absolute  bottom-4 left-6 right-0 flex items-center justify-between px-4 py-3">
-                    <span class="text-white text-sm font-body">Coffee Bean Roasting</span>
-                    <button class="see-more-btn">See More</button>
-                </div>
+          <div
+            class="flex flex-col items-center text-center px-6 relative z-10"
+          >
+            <div
+              class="w-16 h-16 rounded-full bg-[#C08552] text-white font-display font-extrabold text-2xl flex items-center justify-center mb-6"
+            >
+              03
             </div>
+            <h3 class="font-display font-bold text-lg text-[#1e1e1e] mb-2">
+              AI Analysis
+            </h3>
+            <p class="font-body text-gray-500 text-sm leading-relaxed">
+              Model algoritma kami akan mendeteksi anomali, memprediksi risiko,
+              dan merekomendasikan tindakan.
+            </p>
+          </div>
 
+          <div
+            class="flex flex-col items-center text-center px-6 relative z-10"
+          >
+            <div
+              class="w-16 h-16 rounded-full bg-[#8C5A3C] text-white font-display font-extrabold text-2xl flex items-center justify-center mb-6"
+            >
+              04
+            </div>
+            <h3 class="font-display font-bold text-lg text-[#1e1e1e] mb-2">
+              Act & Harvest
+            </h3>
+            <p class="font-body text-gray-500 text-sm leading-relaxed">
+              Dapatkan <i>actionable insights</i> untuk intervensi lahan dan
+              lakukan eksekusi panen yang lebih presisi.
+            </p>
+          </div>
         </div>
-
+      </div>
     </section>
 
     <section class="py-20 px-6">
-        <div class="max-w-[1540px] mx-auto">
-            <div class="grid md:grid-cols-[5fr_7fr] gap-12 items-start justify-between">
+      <div class="max-w-[1540px] mx-auto">
+        <div class="grid md:grid-cols-[1fr_2fr] gap-12 items-start">
+          <div class="anim-title pt-2">
+            <h2
+              class="font-display font-extrabold text-[2rem] md:text-6xl leading-tight text-[#1e1e1e]"
+            >
+              Pertanyaan yang Sering<br />Diajukan (FAQ)
+            </h2>
+          </div>
 
-                <div class="anim-title pt-2 flex flex-col items-start text-left">
-                    <span class="font-display font-semibold tracking-widest text-xs uppercase text-amber-800 mb-2">
-                        The Future of Coffee
-                    </span>
-
-                    <h2
-                        class="font-display font-extrabold text-[2rem] md:text-5xl lg:text-6xl leading-tight text-[#1e1e1e]">
-                        Honoring Tradition,<br>
-                        Leading with<br>
-                        Innovation.
-                    </h2>
-                </div>
-
-                <div class="flex flex-col gap-8 pl-0 md:pl-8">
-
-                    <div>
-                        <h3 class="font-display font-bold text-xl text-[#1e1e1e] mb-3">
-                            Micro-Climate Precision at Every MASL
-                        </h3>
-                        <p class="text-base leading-relaxed font-body text-gray-700 text-justify">
-                            Coffee cultivation is no longer a guessing game against the weather. Our <i>smart
-                                farming</i> ecosystem integrates real-time soil sensors and AI-driven climate
-                            monitoring. We help you accurately track moisture levels, ambient temperature, and exact
-                            nutritional needs, ensuring every coffee tree receives highly tailored care regardless of
-                            elevation.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 class="font-display font-bold text-xl text-[#1e1e1e] mb-3">
-                            Harvest Consistency & Elevated Cup Scores
-                        </h3>
-                        <p class="text-base leading-relaxed font-body text-gray-700 text-justify">
-                            Backed by predictive analytics, the risks of crop failure and pest outbreaks can be
-                            mitigated early. Our technology is built not only to optimize water and fertilizer
-                            efficiency, but also to lock in consistent flavor profiles (<i>tasting notes</i>) and
-                            steadily increase your coffee beans' <i>cup scores</i> season after season.
-                        </p>
-                    </div>
-
-                </div>
-
+          <div class="flex flex-col gap-3">
+            <div
+              class="faq-card faq-item open anim-faq-1 bg-white rounded-xl border border-gray-200 px-5 py-4"
+              onclick="toggleFaq(this)"
+            >
+              <div class="flex items-start justify-between gap-4">
+                <p
+                  class="font-body font-semibold text-[0.95rem] text-[#1e1e1e] leading-snug"
+                >
+                  Apakah saya bisa berlangganan kopi secara bulanan
+                  (Subscription)?
+                </p>
+                <span class="faq-icon flex-shrink-0 mt-0.5">+</span>
+              </div>
+              <div class="faq-answer">
+                <p
+                  class="font-body text-[0.85rem] text-gray-500 leading-relaxed pt-3"
+                >
+                  Tentu! Kami memiliki layanan <i>Coffee Subscription</i> di
+                  mana Anda akan menerima rotasi biji kopi
+                  <i>single origin</i> pilihan kami setiap bulannya, dikirim
+                  langsung ke rumah Anda tanpa biaya pengiriman tambahan.
+                </p>
+              </div>
             </div>
-        </div>
-    </section>
 
-
-
-    </div>
-    </div>
-    </section>
-
-    <section class="py-20 px-6">
-        <div class="max-w-[1540px] mx-auto">
-            <div class="grid md:grid-cols-[1fr_2fr] gap-12 items-start">
-
-                <!-- Kiri: Judul -->
-                <div class="anim-title pt-2">
-                    <h2 class="font-display font-extrabold text-[2rem] md:text-6xl leading-tight text-[#1e1e1e]">
-                        Frequently Asked<br>Questions
-                    </h2>
-                </div>
-
-                <!-- Kanan: Accordion -->
-                <div class="flex flex-col gap-3">
-
-                    <!-- FAQ 1 — open by default -->
-                    <div class="faq-card faq-item open anim-faq-1 bg-white rounded-xl border border-gray-200 px-5 py-4"
-                        onclick="toggleFaq(this)">
-                        <div class="flex items-start justify-between gap-4">
-                            <p class="font-body font-semibold text-[0.95rem] text-[#1e1e1e] leading-snug">
-                                The expense windows adapted sir. Wrong widen drawn.
-                            </p>
-                            <span class="faq-icon flex-shrink-0 mt-0.5">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p class="font-body text-[0.85rem] text-gray-500 leading-relaxed pt-3">
-                                Offending belonging promotion provision an be oh consulted ourselves it. Blessing
-                                welcomed ladyship she met humoured sir breeding her.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 2 -->
-                    <div class="faq-card faq-item anim-faq-2 bg-white rounded-xl border border-gray-200 px-5 py-4"
-                        onclick="toggleFaq(this)">
-                        <div class="flex items-center justify-between gap-4">
-                            <p class="font-body font-medium text-[0.95rem] text-[#1e1e1e]">
-                                Six curiosity day assurance bed necessary?
-                            </p>
-                            <span class="faq-icon flex-shrink-0">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p class="font-body text-[0.85rem] text-gray-500 leading-relaxed pt-3">
-                                Offending belonging promotion provision an be oh consulted ourselves it. Blessing
-                                welcomed ladyship she met humoured sir breeding her.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 3 -->
-                    <div class="faq-card faq-item anim-faq-3 bg-white rounded-xl border border-gray-200 px-5 py-4"
-                        onclick="toggleFaq(this)">
-                        <div class="flex items-center justify-between gap-4">
-                            <p class="font-body font-medium text-[0.95rem] text-[#1e1e1e]">
-                                Produce say the ten moments parties?
-                            </p>
-                            <span class="faq-icon flex-shrink-0">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p class="font-body text-[0.85rem] text-gray-500 leading-relaxed pt-3">
-                                Offending belonging promotion provision an be oh consulted ourselves it. Blessing
-                                welcomed ladyship she met humoured sir breeding her.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 4 -->
-                    <div class="faq-card faq-item anim-faq-4 bg-white rounded-xl border border-gray-200 px-5 py-4"
-                        onclick="toggleFaq(this)">
-                        <div class="flex items-center justify-between gap-4">
-                            <p class="font-body font-medium text-[0.95rem] text-[#1e1e1e]">
-                                Simple innate summer fat appear basket his desire joy?
-                            </p>
-                            <span class="faq-icon flex-shrink-0">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p class="font-body text-[0.85rem] text-gray-500 leading-relaxed pt-3">
-                                Offending belonging promotion provision an be oh consulted ourselves it. Blessing
-                                welcomed ladyship she met humoured sir breeding her.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 5 -->
-                    <div class="faq-card faq-item anim-faq-5 bg-white rounded-xl border border-gray-200 px-5 py-4"
-                        onclick="toggleFaq(this)">
-                        <div class="flex items-center justify-between gap-4">
-                            <p class="font-body font-medium text-[0.95rem] text-[#1e1e1e]">
-                                Outward clothes promise at gravity do excited?
-                            </p>
-                            <span class="faq-icon flex-shrink-0">+</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p class="font-body text-[0.85rem] text-gray-500 leading-relaxed pt-3">
-                                Offending belonging promotion provision an be oh consulted ourselves it. Blessing
-                                welcomed ladyship she met humoured sir breeding her.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
+            <div
+              class="faq-card faq-item anim-faq-2 bg-white rounded-xl border border-gray-200 px-5 py-4"
+              onclick="toggleFaq(this)"
+            >
+              <div class="flex items-center justify-between gap-4">
+                <p class="font-body font-medium text-[0.95rem] text-[#1e1e1e]">
+                  Bagaimana cara bergabung menjadi mitra Wholesale (B2B)?
+                </p>
+                <span class="faq-icon flex-shrink-0">+</span>
+              </div>
+              <div class="faq-answer">
+                <p
+                  class="font-body text-[0.85rem] text-gray-500 leading-relaxed pt-3"
+                >
+                  Anda dapat mendaftar melalui halaman Services kami. Kami
+                  menyediakan <i>tiered pricing</i>, dukungan kalibrasi mesin
+                  rutin, dan dedikasi <i>account manager</i> untuk menyuplai
+                  kebutuhan kopi di kafe atau restoran Anda.
+                </p>
+              </div>
             </div>
+
+            <div
+              class="faq-card faq-item anim-faq-3 bg-white rounded-xl border border-gray-200 px-5 py-4"
+              onclick="toggleFaq(this)"
+            >
+              <div class="flex items-center justify-between gap-4">
+                <p class="font-body font-medium text-[0.95rem] text-[#1e1e1e]">
+                  Apakah perangkat Smart Sensor Kit bisa dibeli secara terpisah?
+                </p>
+                <span class="faq-icon flex-shrink-0">+</span>
+              </div>
+              <div class="faq-answer">
+                <p
+                  class="font-body text-[0.85rem] text-gray-500 leading-relaxed pt-3"
+                >
+                  Ya, <i>Smart Sensor Node</i> kami tersedia di halaman Shop.
+                  Perangkat ini bersifat <i>plug-and-play</i> dan sudah termasuk
+                  lisensi untuk mengakses <i>dashboard analytics</i> kami.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="faq-card faq-item anim-faq-4 bg-white rounded-xl border border-gray-200 px-5 py-4"
+              onclick="toggleFaq(this)"
+            >
+              <div class="flex items-center justify-between gap-4">
+                <p class="font-body font-medium text-[0.95rem] text-[#1e1e1e]">
+                  Berapa lama estimasi waktu pengiriman untuk pesanan biji kopi?
+                </p>
+                <span class="faq-icon flex-shrink-0">+</span>
+              </div>
+              <div class="faq-answer">
+                <p
+                  class="font-body text-[0.85rem] text-gray-500 leading-relaxed pt-3"
+                >
+                  Kami menerapkan sistem <i>roast-to-order</i>. Pesanan yang
+                  masuk sebelum jam 14.00 akan disangrai di hari yang sama dan
+                  dikirimkan H+1 untuk menjamin kopi tiba dalam fase
+                  <i>degassing</i> yang paling optimal.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="faq-card faq-item anim-faq-5 bg-white rounded-xl border border-gray-200 px-5 py-4"
+              onclick="toggleFaq(this)"
+            >
+              <div class="flex items-center justify-between gap-4">
+                <p class="font-body font-medium text-[0.95rem] text-[#1e1e1e]">
+                  Apakah AGGRO menyediakan layanan Private Label Roasting?
+                </p>
+                <span class="faq-icon flex-shrink-0">+</span>
+              </div>
+              <div class="faq-answer">
+                <p
+                  class="font-body text-[0.85rem] text-gray-500 leading-relaxed pt-3"
+                >
+                  Ya, kami memfasilitasi pembuatan <i>house blend</i> khusus
+                  untuk merk Anda sendiri (<i>White Label</i>), mulai dari
+                  <i>sourcing</i> biji hijau (<i>green beans</i>) hingga
+                  pembuatan profil sangrai (<i>roast profile</i>).
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <footer class="py-11 px-6 md:px-10">
-        <div class="max-w-[1540px] mx-auto">
-            <div class="grid grid-cols-2 md:grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-x-8 gap-y-10">
+      <div class="max-w-[1540px] mx-auto">
+        <div
+          class="grid grid-cols-2 md:grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-x-8 gap-y-10"
+        >
+          <div class="col-span-2 md:col-span-1 flex flex-col gap-3">
+            <h2
+              class="logo text-[2.6rem] tracking-tight text-black leading-none"
+            >
+              AGGRO
+            </h2>
+            <p
+              class="font-body text-[0.82rem] text-[#6b6b6b] leading-relaxed max-w-[200px]"
+            >
+              Menjaga tradisi, merangkul <i>modern innovations</i> untuk
+              industri kopi yang lebih baik.
+            </p>
+          </div>
 
-                <!-- Brand Column -->
-                <div class="col-span-2 md:col-span-1 flex flex-col gap-3">
-                    <h2 class="logo  text-[2.6rem] tracking-tight text-black leading-none">
-                        AGGRO
-                    </h2>
-                    <p class="font-body text-[0.82rem] text-[#6b6b6b] leading-relaxed max-w-[200px]">
-                        Honor the traditions of farming while embracing modern innovations. Our platform
-                    </p>
-                </div>
+          <div class="flex flex-col gap-3">
+            <h3 class="font-body font-semibold text-[0.9rem] text-black">
+              Shop
+            </h3>
+            <ul class="flex flex-col gap-2">
+              <li>
+                <a href="#" class="nav-link text-black font-body text-sm"
+                  >All Coffee</a
+                >
+              </li>
+              <li>
+                <a href="#" class="nav-link text-black font-body text-sm"
+                  >Subscriptions</a
+                >
+              </li>
+              <li>
+                <a href="#" class="nav-link text-black font-body text-sm"
+                  >Smart Accessories</a
+                >
+              </li>
+            </ul>
+          </div>
 
-                <!-- Product Column -->
-                <div class="flex flex-col gap-3">
-                    <h3 class="font-body font-semibold text-[0.9rem] text-black">Product</h3>
-                    <ul class="flex flex-col gap-2">
-                        <li><a href="#" class="nav-link text-black font-body text-sm">Features</a></li>
-                        <li><a href="#" class="nav-link text-black font-body text-sm">Pricing</a></li>
-                        <li><a href="#" class="nav-link text-black font-body text-sm">Case studies</a></li>
-                    </ul>
-                </div>
+          <div class="flex flex-col gap-3">
+            <h3 class="font-body font-semibold text-[0.9rem] text-black">
+              Company
+            </h3>
+            <ul class="flex flex-col gap-2">
+              <li>
+                <a
+                  href="about.html"
+                  class="nav-link text-black font-body text-sm"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="nav-link text-black font-body text-sm"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a href="#" class="nav-link text-black font-body text-sm"
+                  >Careers</a
+                >
+              </li>
+            </ul>
+          </div>
 
-                <!-- Company Column -->
-                <div class="flex flex-col gap-3">
-                    <h3 class="font-body font-semibold text-[0.9rem] text-black">Company</h3>
-                    <ul class="flex flex-col gap-2">
-                        <li><a href="#" class="nav-link text-black font-body text-sm">About</a></li>
-                        <li><a href="#" class="nav-link text-black font-body text-sm">Contact us</a></li>
-                        <li><a href="#" class="nav-link text-black font-body text-sm">Careers</a></li>
-                    </ul>
-                </div>
+          <div class="flex flex-col gap-3">
+            <h3 class="font-body font-semibold text-[0.9rem] text-black">
+              Services
+            </h3>
+            <ul class="flex flex-col gap-2">
+              <li>
+                <a href="#" class="nav-link text-black font-body text-sm"
+                  >Wholesale B2B</a
+                >
+              </li>
+              <li>
+                <a href="#" class="nav-link text-black font-body text-sm"
+                  >Private Label</a
+                >
+              </li>
+              <li>
+                <a href="#" class="nav-link text-black font-body text-sm"
+                  >Barista Training</a
+                >
+              </li>
+            </ul>
+          </div>
 
-                <!-- Support Column -->
-                <div class="flex flex-col gap-3">
-                    <h3 class="font-body font-semibold text-[0.9rem] text-black">Support</h3>
-                    <ul class="flex flex-col gap-2">
-                        <li><a href="#" class="nav-link text-black font-body text-sm">Getting started</a></li>
-                        <li><a href="#" class="nav-link text-black font-body text-sm">Help center</a></li>
-                        <li><a href="#" class="nav-link text-black font-body text-sm">Server status</a></li>
-                    </ul>
-                </div>
-
-                <!-- Downloads Column -->
-                <div class="flex flex-col gap-3">
-                    <h3 class="font-body font-semibold text-[0.9rem] text-black">Downloads</h3>
-                    <ul class="flex flex-col gap-2">
-                        <li><a href="#" class="nav-link text-black font-body text-sm">iOS</a></li>
-                        <li><a href="#" class="nav-link text-black font-body text-sm">Android</a></li>
-                        <li><a href="#" class="nav-link text-black font-body text-sm">Mac</a></li>
-                    </ul>
-                </div>
-
-            </div>
+          <div class="flex flex-col gap-3">
+            <h3 class="font-body font-semibold text-[0.9rem] text-black">
+              Support
+            </h3>
+            <ul class="flex flex-col gap-2">
+              <li>
+                <a href="#" class="nav-link text-black font-body text-sm"
+                  >Shipping Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="nav-link text-black font-body text-sm"
+                  >Help Center</a
+                >
+              </li>
+              <li>
+                <a href="#" class="nav-link text-black font-body text-sm"
+                  >Return Policy</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </footer>
-</body>
-<script src="assests/js/toggle.js"></script>
+    
+    <!-- Chat Bot Button Modal -->
+    <button
+      id="chatbot-trigger"
+      class="fixed bottom-6 right-6 z-[60] w-14 h-14 bg-[#C08552] text-white rounded-full shadow-2xl flex items-center justify-center text-2xl hover:bg-[#8C5A3C] transition-all duration-300 hover:scale-110"
+    >
+      <i class="fa-solid fa-comment-dots"></i>
+    </button>
 
+    <!-- Chat Bot Modal -->
+    <div
+      id="chatbot-modal"
+      class="fixed bottom-24 right-6 z-[60] w-[350px] bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col opacity-0 pointer-events-none transition-all duration-300 translate-y-4 scale-95 origin-bottom-right"
+    >
+      <div
+        class="bg-[#1a1a1a] text-white px-5 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="w-8 h-8 rounded-full bg-[#C08552] flex items-center justify-center shadow-inner"
+          >
+            <i class="fa-solid fa-robot text-sm"></i>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-sm tracking-wide">
+              AGGRO Assistant
+            </h3>
+            <p
+              class="font-body text-[0.65rem] text-white/60 flex items-center gap-1.5 mt-0.5"
+            >
+              <span class="w-1.5 h-1.5 rounded-full bg-green-500 block"></span>
+              Online
+            </p>
+          </div>
+        </div>
+        <button
+          id="chatbot-close"
+          class="text-white/50 hover:text-white transition-colors"
+        >
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <div
+        class="flex-1 p-5 overflow-y-auto h-[320px] bg-[#f5f0eb] flex flex-col gap-4"
+      >
+        <div class="flex gap-2">
+          <div
+            class="w-7 h-7 rounded-full bg-[#1a1a1a] text-white flex items-center justify-center flex-shrink-0 mt-1"
+          >
+            <i class="fa-solid fa-robot text-[0.6rem]"></i>
+          </div>
+          <div
+            class="bg-white border border-gray-100 p-3.5 rounded-2xl rounded-tl-sm shadow-sm"
+          >
+            <p class="font-body text-[0.85rem] text-gray-700 leading-relaxed">
+              Halo! 👋 Selamat datang di AGGRO. Ada yang bisa kami bantu seputar
+              produk kopi atau kemitraan B2B hari ini?
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-2 pl-9">
+          <button
+            class="font-body text-xs font-semibold text-[#C08552] border border-[#C08552] bg-white px-3 py-1.5 rounded-full hover:bg-[#C08552] hover:text-white transition-colors shadow-sm"
+          >
+            Tanya Subscription
+          </button>
+          <button
+            class="font-body text-xs font-semibold text-[#C08552] border border-[#C08552] bg-white px-3 py-1.5 rounded-full hover:bg-[#C08552] hover:text-white transition-colors shadow-sm"
+          >
+            Suplai B2B (Wholesale)
+          </button>
+          <button
+            class="font-body text-xs font-semibold text-[#C08552] border border-[#C08552] bg-white px-3 py-1.5 rounded-full hover:bg-[#C08552] hover:text-white transition-colors shadow-sm"
+          >
+            Status Pesanan
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="p-4 bg-white border-t border-gray-100 flex items-center gap-3"
+      >
+        <input
+          type="text"
+          placeholder="Ketik pesan Anda..."
+          class="flex-1 font-body text-sm bg-[#fafaf8] border border-gray-200 rounded-full px-4 py-2.5 focus:outline-none focus:border-[#C08552] transition-colors"
+        />
+        <button
+          class="w-10 h-10 rounded-full bg-[#1a1a1a] text-white flex items-center justify-center hover:bg-[#C08552] transition-colors flex-shrink-0 shadow-md"
+        >
+          <i class="fa-solid fa-paper-plane text-xs translate-x-[-1px]"></i>
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="assests/js/toggle.js"></script>
+  <script src="assests/js/chat-bot.js"></script>
+  <script src="assests/js/navbar-scrollbar.js"></script>
 </html>
