@@ -1,0 +1,665 @@
+<?php
+require_once 'db_connect.php';
+// checkout.php
+$activePage = 'checkout';
+
+if (!isset($_SESSION['cart']) || empty($_SESSION['cart'])) {
+    header("Location: product.php");
+    exit();
+}
+
+$total_items_in_cart = array_sum($_SESSION['cart']);
+?>
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secure Checkout – AGGRO Premium Coffee</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assests/variables.css" />
+    <link rel="stylesheet" href="assests/product.css" />
+    <script src="assests/tailwind-config.js"></script>
+  </head>
+
+  <body class="bg-[#f5f0eb]">
+    <nav class="fixed top-0 left-0 right-0 z-50 nav-fixed" id="navbar">
+      <div
+        class="max-w-[1540px] mx-auto px-6 w-full py-8 flex items-center justify-between"
+      >
+        <a
+          href="index.php"
+          class="logo text-white text-4xl tracking-widest"
+          style="letter-spacing: 0.12em"
+          >AGGRO</a
+        >
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            href="services.php"
+            class="text-white/80 hover:text-white text-xl font-medium transition-colors"
+            >Services</a
+          >
+          <a
+            href="product.php"
+            class="text-white/80 hover:text-white text-xl font-medium transition-colors"
+            >Shop</a
+          >
+          <a
+            href="about.php"
+            class="text-white/80 hover:text-white text-xl font-medium transition-colors"
+            >About</a
+          >
+        </div>
+        <a href="cart.php" class="btn-outline text-xl">Cart (<?php echo $total_items_in_cart; ?>)</a>
+      </div>
+    </nav>
+
+    <section
+      class="product-hero w-full min-h-[45vh] flex flex-col justify-end pb-12 pt-36 rounded-b-[30px] overflow-hidden relative"
+    >
+      <div
+        class="grain-overlay absolute inset-0 pointer-events-none z-10"
+      ></div>
+
+      <div class="max-w-[1540px] mx-auto px-6 w-full relative z-20">
+        <div class="flex flex-col gap-3">
+          <div class="anim-1">
+            <p class="product-eyebrow mb-1">
+              <i class="fa-solid fa-shield-halved mr-1 text-[#C08552]"></i>
+              256-bit Encryption
+            </p>
+            <h1 class="product-hero-title anim-2 text-white">
+              Secure <span class="text-[#C08552]">Checkout.</span>
+            </h1>
+          </div>
+          <div class="anim-3 max-w-xl">
+            <p class="product-hero-sub text-white/60">
+              Selesaikan pengisian informasi pengiriman dan pilih opsi
+              pembayaran prioritas Anda untuk memproses pesanan
+              <i>freshly roasted beans</i>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 px-6">
+      <div class="max-w-[1540px] mx-auto">
+        <form action="process_checkout.php" method="POST" class="grid grid-cols-1 lg:grid-cols-[7fr_4fr] gap-12 items-start">
+          <div class="flex flex-col gap-8 reveal">
+            <div
+              class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm flex flex-col gap-6"
+            >
+              <div
+                class="flex items-center gap-4 border-b border-gray-100 pb-4"
+              >
+                <div
+                  class="w-8 h-8 rounded-full bg-[#1a1a1a] text-white flex items-center justify-center font-display font-bold text-sm"
+                >
+                  01
+                </div>
+                <h2 class="font-display font-bold text-xl text-[#1a1a1a]">
+                  Alamat Pengiriman
+                  <span class="text-gray-400 font-body text-xs font-normal"
+                    >/ Shipping Address</span
+                  >
+                </h2>
+              </div>
+
+              <div class="flex flex-col gap-5">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  <div class="flex flex-col gap-2">
+                    <label
+                      class="font-body text-xs font-semibold text-gray-500 uppercase tracking-wider"
+                      >Nama Penerima</label
+                    >
+                    <input
+                      type="text"
+                      name="nama_pembeli"
+                      placeholder="Akbar Vabiansyah"
+                      class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#C08552] bg-[#fafaf8] font-body text-sm text-gray-800 transition-colors"
+                      required
+                    />
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label
+                      class="font-body text-xs font-semibold text-gray-500 uppercase tracking-wider"
+                      >Nomor Handphone</label
+                    >
+                    <input
+                      type="tel"
+                      name="no_hp"
+                      placeholder="08XXXXXXXXXX"
+                      class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#C08552] bg-[#fafaf8] font-body text-sm text-gray-800 transition-colors"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                  <label
+                    class="font-body text-xs font-semibold text-gray-500 uppercase tracking-wider"
+                    >Alamat Lengkap</label
+                  >
+                  <input
+                    type="text"
+                    name="alamat"
+                    placeholder="Nama Jalan, Blok, Nomor Rumah, RT/RW, Kecamatan"
+                    class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#C08552] bg-[#fafaf8] font-body text-sm text-gray-800 transition-colors"
+                    required
+                  />
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                  <div class="flex flex-col gap-2">
+                    <label
+                      class="font-body text-xs font-semibold text-gray-500 uppercase tracking-wider"
+                      >Provinsi</label
+                    >
+                    <select
+                      name="provinsi"
+                      class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#C08552] bg-[#fafaf8] font-body text-sm text-gray-600 transition-colors"
+                      required
+                    >
+                      <option value="" disabled selected>
+                        Pilih Provinsi...
+                      </option>
+                      <option value="lampung">Lampung</option>
+                      <option value="dkj">DKI Jakarta</option>
+                      <option value="jabar">Jawa Barat</option>
+                    </select>
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label
+                      class="font-body text-xs font-semibold text-gray-500 uppercase tracking-wider"
+                      >Kota / Kabupaten</label
+                    >
+                    <select
+                      name="kota"
+                      class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#C08552] bg-[#fafaf8] font-body text-sm text-gray-600 transition-colors"
+                      required
+                    >
+                      <option value="" disabled selected>Pilih Kota...</option>
+                      <option value="bandarlampung">Bandar Lampung</option>
+                      <option value="jakpus">Jakarta Pusat</option>
+                      <option value="bandung">Bandung</option>
+                    </select>
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label
+                      class="font-body text-xs font-semibold text-gray-500 uppercase tracking-wider"
+                      >Kode Pos</label
+                    >
+                    <input
+                      type="text"
+                      name="kode_pos"
+                      placeholder="35141"
+                      class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#C08552] bg-[#fafaf8] font-body text-sm text-gray-800 transition-colors"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm flex flex-col gap-6"
+            >
+              <div
+                class="flex items-center gap-4 border-b border-gray-100 pb-4"
+              >
+                <div
+                  class="w-8 h-8 rounded-full bg-[#1a1a1a] text-white flex items-center justify-center font-display font-bold text-sm"
+                >
+                  02
+                </div>
+                <h2 class="font-display font-bold text-xl text-[#1a1a1a]">
+                  Metode Pengiriman
+                  <span class="text-gray-400 font-body text-xs font-normal"
+                    >/ Delivery Service</span
+                  >
+                </h2>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <label
+                  class="border-2 border-[#C08552] p-5 rounded-2xl flex items-center justify-between cursor-pointer bg-[#fafaf8] transition-all"
+                >
+                  <div class="flex items-center gap-4">
+                    <input
+                      type="radio"
+                      name="shipping"
+                      value="priority"
+                      class="accent-[#C08552] w-4 h-4"
+                      checked
+                    />
+                    <div>
+                      <span class="font-display font-bold text-gray-900 block"
+                        >AGGRO Express Priority</span
+                      >
+                      <span class="font-body text-xs text-gray-400"
+                        >Estimasi H+1 (Roast fresh to door)</span
+                      >
+                    </div>
+                  </div>
+                  <span class="font-display font-bold text-[#8C5A3C] text-sm"
+                    >FREE</span
+                  >
+                </label>
+
+                <label
+                  class="border border-gray-200 p-5 rounded-2xl flex items-center justify-between cursor-pointer hover:border-gray-300 transition-all"
+                >
+                  <div class="flex items-center gap-4">
+                    <input
+                      type="radio"
+                      name="shipping"
+                      value="standard"
+                      class="accent-[#C08552] w-4 h-4"
+                    />
+                    <div>
+                      <span class="font-display font-bold text-gray-900 block"
+                        >Regular Logistik Courier</span
+                      >
+                      <span class="font-body text-xs text-gray-400"
+                        >Estimasi 2-3 Hari Kerja</span
+                      >
+                    </div>
+                  </div>
+                  <span class="font-display font-bold text-gray-500 text-sm"
+                    >FREE</span
+                  >
+                </label>
+              </div>
+            </div>
+
+            <div
+              class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm flex flex-col gap-6"
+            >
+              <div
+                class="flex items-center gap-4 border-b border-gray-100 pb-4"
+              >
+                <div
+                  class="w-8 h-8 rounded-full bg-[#1a1a1a] text-white flex items-center justify-center font-display font-bold text-sm"
+                >
+                  03
+                </div>
+                <h2 class="font-display font-bold text-xl text-[#1a1a1a]">
+                  Metode Pembayaran
+                  <span class="text-gray-400 font-body text-xs font-normal"
+                    >/ Payment Gateway</span
+                  >
+                </h2>
+              </div>
+
+              <div class="flex flex-col gap-4">
+                <label
+                  class="border-2 border-[#C08552] p-5 rounded-2xl flex items-center justify-between cursor-pointer bg-[#fafaf8] transition-all"
+                >
+                  <div class="flex items-start gap-4">
+                    <input
+                      type="radio"
+                      name="payment"
+                      value="qris"
+                      class="accent-[#C08552] w-4 h-4 mt-1"
+                      checked
+                    />
+                    <div>
+                      <span class="font-display font-bold text-gray-900 block"
+                        >QRIS / Instant E-Wallet</span
+                      >
+                      <span class="font-body text-xs text-gray-400 block mt-0.5"
+                        >Scan otomatis atau bayar langsung via GoPay, OVO, DANA,
+                        ShopeePay.</span
+                      >
+                      <div class="flex gap-3 text-gray-400 text-base mt-2.5">
+                        <i class="fa-solid fa-qrcode"></i>
+                        <i class="fa-solid fa-wallet"></i>
+                        <i class="fa-solid fa-mobile-screen"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <span
+                    class="text-xs font-body font-bold text-[#C08552] bg-[#f5f0eb] px-2.5 py-1 rounded-md tracking-wider"
+                    >POPULAR</span
+                  >
+                </label>
+
+                <label
+                  class="border border-gray-200 p-5 rounded-2xl flex items-center justify-between cursor-pointer hover:border-gray-300 transition-all"
+                >
+                  <div class="flex items-start gap-4">
+                    <input
+                      type="radio"
+                      name="payment"
+                      value="va"
+                      class="accent-[#C08552] w-4 h-4 mt-1"
+                    />
+                    <div>
+                      <span class="font-display font-bold text-gray-900 block"
+                        >Mobile Banking / Virtual Account</span
+                      >
+                      <span class="font-body text-xs text-gray-400 block mt-0.5"
+                        >Transfer instan terverifikasi otomatis via BRImo (BRI),
+                        BCA, Mandiri, atau BNI.</span
+                      >
+                      <div
+                        class="flex gap-3 text-gray-400 text-sm mt-2.5 font-bold"
+                      >
+                        <span>BRImonthly</span> · <span>BCA VA</span> ·
+                        <span>Mandiri</span>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+
+                <label
+                  class="border border-gray-200 p-5 rounded-2xl flex items-center justify-between cursor-pointer hover:border-gray-300 transition-all"
+                >
+                  <div class="flex items-start gap-4">
+                    <input
+                      type="radio"
+                      name="payment"
+                      value="cc"
+                      class="accent-[#C08552] w-4 h-4 mt-1"
+                    />
+                    <div>
+                      <span class="font-display font-bold text-gray-900 block"
+                        >Credit Card / Debit Card</span
+                      >
+                      <span class="font-body text-xs text-gray-400 block mt-0.5"
+                        >Mendukung Visa, MasterCard, dan JCB dengan sistem
+                        keamanan 3D Secure.</span
+                      >
+                      <div class="flex gap-3 text-gray-400 text-base mt-2.5">
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                        <i class="fa-brands fa-cc-jcb"></i>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white p-8 rounded-3xl border border-gray-100 shadow-md flex flex-col gap-6 reveal"
+          >
+            <div>
+              <span class="section-tag">Review Order</span>
+              <h3 class="font-display font-bold text-2xl text-[#1a1a1a] mt-1">
+                Ringkasan Bag
+                <span class="text-xs font-body font-normal text-gray-400"
+                  >/ Summary</span
+                >
+              </h3>
+            </div>
+
+            <div
+              class="flex flex-col gap-4 border-b border-gray-100 pb-5 max-h-[220px] overflow-y-auto pr-2"
+            >
+<?php
+$subtotal = 0;
+$ids = implode(',', array_map('intval', array_keys($_SESSION['cart'])));
+$sql = "SELECT * FROM produk WHERE id_produk IN ($ids)";
+$result = $conn->query($sql);
+
+if ($result && $result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $id = $row['id_produk'];
+        $qty = $_SESSION['cart'][$id];
+        $subtotal += $row['harga'] * $qty;
+        
+        $nama = htmlspecialchars($row['nama_produk']);
+        $harga = number_format($row['harga'] * $qty, 0, ',', '.');
+        $unit = htmlspecialchars($row['unit']);
+        $gambar = htmlspecialchars($row['gambar']);
+?>
+              <div
+                class="flex items-center justify-between gap-4 text-sm font-body"
+              >
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-[#fafaf8] border border-gray-100 overflow-hidden flex-shrink-0"
+                  >
+                    <img
+                      src="<?php echo $gambar; ?>"
+                      alt=""
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <span
+                      class="font-bold text-[#1a1a1a] block truncate max-w-[160px]"
+                      ><?php echo $nama; ?></span
+                    >
+                    <span class="text-xs text-gray-400">Qty: <?php echo $qty; ?> &middot; <?php echo $unit; ?></span>
+                  </div>
+                </div>
+                <span class="font-display font-bold text-[#1a1a1a]"
+                  >Rp <?php echo $harga; ?></span
+                >
+              </div>
+<?php
+    }
+}
+?>
+            </div>
+
+<?php
+$ppn = $subtotal * 0.11;
+$total = $subtotal + $ppn;
+?>
+            <div
+              class="flex flex-col gap-3 font-body text-sm text-gray-600 border-b border-gray-100 pb-5"
+            >
+              <div class="flex justify-between">
+                <span>Subtotal</span>
+                <span class="font-semibold text-[#1a1a1a]">Rp <?php echo number_format($subtotal, 0, ',', '.'); ?></span>
+              </div>
+              <div class="flex justify-between">
+                <span>Biaya Pengiriman Priority</span>
+                <span class="font-semibold text-green-600 uppercase">FREE</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Pajak PPN (11%)</span>
+                <span class="font-semibold text-[#1a1a1a]">Rp <?php echo number_format($ppn, 0, ',', '.'); ?></span>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-baseline">
+              <span class="font-display font-bold text-lg text-[#1a1a1a]"
+                >Total Akhir</span
+              >
+              <span class="font-display font-extrabold text-[#8C5A3C] text-3xl"
+                >Rp <?php echo number_format($total, 0, ',', '.'); ?></span
+              >
+            </div>
+
+            <div class="flex flex-col gap-3 mt-2">
+              <button
+                type="submit"
+                class="btn-primary-brown w-full justify-center text-center py-4 cursor-pointer"
+              >
+                <i class="fa-solid fa-shield-check mr-2"></i> Bayar Sekarang
+              </button>
+              <p
+                class="text-center font-body text-[0.68rem] text-gray-400 leading-normal"
+              >
+                Dengan menekan tombol, Anda menyetujui seluruh aturan
+                <a href="#" class="underline hover:text-gray-600"
+                  >Terms of Service</a
+                >
+                yang berlaku di ekosistem AGGRO.
+              </p>
+            </div>
+          </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="py-11 px-6 md:px-10">
+      <div class="max-w-[1540px] mx-auto">
+        <div
+          class="grid grid-cols-2 md:grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-x-8 gap-y-10"
+        >
+          <div class="col-span-2 md:col-span-1 flex flex-col gap-3">
+            <h2
+              class="logo text-[2.6rem] tracking-tight text-black leading-none"
+            >
+              AGGRO
+            </h2>
+            <p
+              class="font-body text-[0.82rem] text-[#6b6b6b] leading-relaxed max-w-[200px]"
+            >
+              Menjaga tradisi, merangkul <i>modern innovations</i> untuk
+              industri kopi yang lebih baik.
+            </p>
+            <div class="flex gap-4 mt-2">
+              <a href="#" class="social-icon"
+                ><i
+                  class="fa-brands fa-instagram text-[#6b6b6b] hover:text-[#C08552]"
+                ></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i
+                  class="fa-brands fa-linkedin text-[#6b6b6b] hover:text-[#C08552]"
+                ></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i
+                  class="fa-brands fa-x-twitter text-[#6b6b6b] hover:text-[#C08552]"
+                ></i
+              ></a>
+            </div>
+          </div>
+          <div class="flex flex-col gap-3">
+            <h3 class="font-body font-semibold text-[0.9rem] text-black">
+              Shop
+            </h3>
+            <ul class="flex flex-col gap-2">
+              <li>
+                <a href="#" class="nav-link text-black font-body text-sm"
+                  >All Coffee</a
+                >
+              </li>
+              <li>
+                <a href="#" class="nav-link text-black font-body text-sm"
+                  >Subscriptions</a
+                >
+              </li>
+              <li>
+                <a href="#" class="nav-link text-black font-body text-sm"
+                  >Smart Accessories</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-3">
+            <h3 class="font-body font-semibold text-[0.9rem] text-black">
+              Company
+            </h3>
+            <ul class="flex flex-col gap-2">
+              <li>
+                <a
+                  href="about.php"
+                  class="nav-link text-black font-body text-sm"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.php"
+                  class="nav-link text-black font-body text-sm"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a href="#" class="nav-link text-black font-body text-sm"
+                  >Careers</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-3">
+            <h3 class="font-body font-semibold text-[0.9rem] text-black">
+              Services
+            </h3>
+            <ul class="flex flex-col gap-2">
+              <li>
+                <a href="#" class="nav-link text-black font-body text-sm"
+                  >Wholesale B2B</a
+                >
+              </li>
+              <li>
+                <a href="#" class="nav-link text-black font-body text-sm"
+                  >Private Label</a
+                >
+              </li>
+              <li>
+                <a href="#" class="nav-link text-black font-body text-sm"
+                  >Barista Training</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-3">
+            <h3 class="font-body font-semibold text-[0.9rem] text-black">
+              Support
+            </h3>
+            <ul class="flex flex-col gap-2">
+              <li>
+                <a href="#" class="nav-link text-black font-body text-sm"
+                  >Shipping Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="nav-link text-black font-body text-sm"
+                  >Help Center</a
+                >
+              </li>
+              <li>
+                <a href="#" class="nav-link text-black font-body text-sm"
+                  >Return Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-200 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4"
+        >
+          <p class="font-body text-xs text-gray-400">
+            © 2026 AGGRO. All rights reserved.
+          </p>
+          <div class="flex gap-6">
+            <a
+              href="#"
+              class="font-body text-xs text-gray-400 hover:text-gray-600 transition-colors"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="font-body text-xs text-gray-400 hover:text-gray-600 transition-colors"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assests/js/navbar-scrollbar.js"></script>
+  </body>
+</html>
